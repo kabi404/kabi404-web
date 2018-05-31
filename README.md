@@ -4,4 +4,4 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![CodeFactor](https://www.codefactor.io/repository/github/kabi404/kabi404.github.io/badge)](https://www.codefactor.io/repository/github/kabi404/kabi404.github.io)
 
-https://kabi404.me
+http://www.kabi404.me
