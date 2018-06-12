@@ -1,1 +1,18 @@
 
+.dark-bg {
+    background-color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.transparent {
+    background-color: rgba(245, 245, 245, 0);
+}
+
+.skill {
+    background-color: #4c4c4c;
+    color: white
+}
