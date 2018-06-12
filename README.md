@@ -5,3 +5,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/kabi404/kabi404.github.io/badge)](https://www.codefactor.io/repository/github/kabi404/kabi404.github.io)
 
 http://www.kabi404.me
+
+My personal web page.
+It includes personal information, studies, skills, my curriculum and more.
+Translated to Spanish, English and Japanese.
