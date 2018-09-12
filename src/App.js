@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-3 text-center bg-dark">
+          <div className="row justify-content-end">
+            <div className="col-3 text-center bg-dark fixed-top navigation">
                 <Nav/>
             </div>
             <div className="col-9 text-center">
