@@ -18,7 +18,7 @@ const Nav = () => {
                 <i class="fas fa-code"></i>
             </a>
             <a class="nav-link text-white h2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                <i class="fas fa-pen-nib"></i>
+                <i class="fas fa-feather-alt"></i>
             </a>
         </div>
     );
