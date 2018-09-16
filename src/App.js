@@ -3,6 +3,7 @@ import './App.css';
 
 import Nav from './components/Nav';
 import Content from './components/Content';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -11,8 +12,6 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-3 text-center bg-dark">   
-              
-
               <Nav/>
             </div>
             <div className="col-9">
@@ -20,6 +19,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   }
