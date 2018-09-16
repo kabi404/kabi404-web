@@ -3,7 +3,7 @@ import React from 'react';
 import Home from './Home';
 import Blog from './Blog';
 import Projects from './Projects';
-import Skills from './Skills';
+import About from './About';
 
 const Content = () => {
     return(
@@ -12,7 +12,7 @@ const Content = () => {
                 <Home/>
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <Skills/>
+                <About/>
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 <Projects/>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Nav from './components/Nav';
@@ -11,7 +10,9 @@ class App extends Component {
       <div className="App">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-3 text-center bg-dark">
+            <div className="col-3 text-center bg-dark">   
+              
+
               <Nav/>
             </div>
             <div className="col-9">
