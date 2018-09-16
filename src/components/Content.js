@@ -1,19 +1,24 @@
 import React from 'react';
 
+import Home from './Home';
+import Blog from './Blog';
+import Projects from './Projects';
+import Skills from './Skills';
+
 const Content = () => {
     return(
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-              qwdqwdqwdqwdqw
+                <Home/>
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-              qwdqwdqwdqwdqwdwqdqwdwqdwqdqwbjqdbj kdwqbjkdwqbdqwbjdwbjkqbjkdqwbjqdwbjkdqwbjwqdbjkwdqbjkdqwbdqwb kjdqwbjbdqwjbjwdkqbjdkqwbjwdqjbkdwqbjkwdqjbkdwbkjdwqbjkqwdbjkdwqbjdbjkdqwbjkdqwbjdwqbjqd kwjbdbjqwkbjdqwbqdwbjdqwjbkdq wbjkdqwbjkdqwbjdqwbjqdwbjkdqwbjkdqwjbqbkjdwqwbjdqwbjkqwddqwbjdqwbjkdqwbjdwqbjkdwbqjkqwbjkdbwjqdwbjkwkbdjjbwkdqjwqdbj kdwqbjkdwqbjkdqwbjkqwdbjkdqwbjkqdwbjkdqwbjkdqwbjkqwdbjqwjbdwqbjdqwbjkqwdbjkdqwbjkdwqbjkdqwbjdw qbjdqwbkjdqwbjkdqwbkj
+                <Skills/>
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-              ..12312312312312312312.
+                <Projects/>
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-              ..wefwr13r23fr23r23r2rf.
+                <Blog/>
             </div>
         </div>
     );
