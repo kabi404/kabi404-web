@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container-fluid">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-3 text-center bg-dark">   
               <Nav/>
             </div>

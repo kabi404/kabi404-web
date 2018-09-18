@@ -4,7 +4,7 @@ const Nav = () => {
     return(
         <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-            <p className="text-white h1 display-1 my-5">
+            <p className="text-white h1 display-1 my-5 text-center">
                 <i class="fab fa-firefox"></i>
             </p>
 
