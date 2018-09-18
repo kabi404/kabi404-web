@@ -9,7 +9,7 @@ const Interest = () => {
 
             <div class="row mb-4">
                 <div class="col-sm-3">
-                    <div class="card bg-light mt-2">
+                    <div class="card bg-light mt-2 mx-2">
                         <div class="card-body">
                             <p class="display-1 text-center">
                                 <i class="fas fa-code"></i>
@@ -22,7 +22,7 @@ const Interest = () => {
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card bg-light mt-2">
+                    <div class="card bg-light mt-2 mx-2">
                         <div class="card-body">
                             <p class="display-1 text-center">
                                 <i class="fas fa-flask"></i>
@@ -35,7 +35,7 @@ const Interest = () => {
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card bg-light mt-2">
+                    <div class="card bg-light mt-2 mx-2">
                         <div class="card-body">
                             <p class="display-1 text-center">
                                 <i class="fas fa-gamepad"></i>
@@ -47,8 +47,8 @@ const Interest = () => {
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 mt-2">
-                    <div class="card bg-light">
+                <div class="col-sm-3">
+                    <div class="card bg-light mt-2 mx-2">
                         <div class="card-body">
                             <p class="display-1 text-center">
                                 <i class="fas fa-torii-gate"></i>
