@@ -11,10 +11,10 @@ class App extends Component {
       <div className="App">
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-3 text-center bg-dark">   
+            <div className="col-sm-2 text-center bg-dark">   
               <Nav/>
             </div>
-            <div className="col-9">
+            <div className="col-10">
               <Content/>
             </div>
           </div>

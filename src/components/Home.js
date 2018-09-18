@@ -18,11 +18,19 @@ const Home = () => {
             </div>
 
             <div className="row justify-content-center">
-                <p className="text-center my-4">
-                    <span role="img" aria-label="pc">💻</span> Software Engineer 💻<br/>
-                    🎌 日本語の学生 🎌<br/>
-                    🔭 Heir of Principia Mathematica 🔭<br/>
-                    🦊 I'm not human, I'm a proud fox 🦊
+                <p className="text-center my-5">
+                    <span role="img" aria-label="pc">💻</span> 
+                        &nbsp;Software Engineer&nbsp;
+                    <span role="img" aria-label="pc">💻</span><br/>
+                    <span role="img" aria-label="japanese-flags">🎌</span>
+                        &nbsp;日本語の学生&nbsp;
+                    <span role="img" aria-label="japanese-flags">🎌</span><br/>
+                    <span role="img" aria-label="telescope">🔭</span>
+                        &nbsp;Heir of Principia Mathematica&nbsp;
+                    <span role="img" aria-label="telescope">🔭</span><br/>
+                    <span role="img" aria-label="fox">🦊</span>
+                        &nbsp;I'm not human, I'm a proud fox&nbsp;
+                    <span role="img" aria-label="fox">🦊</span>
                 </p>
 
                 
