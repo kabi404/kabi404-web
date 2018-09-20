@@ -1,6 +1,6 @@
 import React from 'react';
 import Interest from './subcomponents/Interest';
-
+import Skills from './subcomponents/Skills';
 
 const About = () => {
     return(
@@ -35,6 +35,8 @@ const About = () => {
             </div>
 
             <Interest/>
+
+            <Skills/>
             
 
         </div>

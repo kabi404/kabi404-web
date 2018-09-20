@@ -15,7 +15,7 @@ const Nav = () => {
                 <i class="fas fa-user-circle"></i>
             </a>
             <a class="nav-link text-white h2" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-drafting-compass"></i>
             </a>
             <a class="nav-link text-white h2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                 <i class="fas fa-feather-alt"></i>
