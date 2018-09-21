@@ -21,7 +21,7 @@ const Skills = () => {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
-                            <i class="fas fa-screwdriver"></i> Other Tech
+                            <i class="fas fa-screwdriver"></i> Other Technologies
                         </a>
                     </li>
                 </ul>
@@ -88,6 +88,7 @@ const Skills = () => {
                 
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">loop</div>
+
             </div>
     );
 }
