@@ -11,7 +11,7 @@ const About = () => {
 
             <div className="row justify-content-center">
                 <p className="h1 display-4 ">
-                    <i class="fas fa-user-astronaut"></i>
+                    <i className="fas fa-user-astronaut"></i>
                 </p>
             </div>
 

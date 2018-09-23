@@ -13,7 +13,7 @@ const Home = () => {
 
             <div className="row justify-content-center">
                 <p className="h1 display-1 my-5">
-                    <i class="fab fa-firefox"></i>
+                    <i className="fab fa-firefox"></i>
                 </p>
             </div>
 
