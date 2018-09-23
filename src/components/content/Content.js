@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Home from './Home';
-import Blog from './Blog';
-import Projects from './Projects';
-import About from './About';
+import Home from './subComponents/home/Home';
+import Blog from './subComponents/blog/Blog';
+import Projects from './subComponents/projects/Projects';
+import About from './subComponents/about/About';
 
 const Content = () => {
     return(

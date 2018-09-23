@@ -1,6 +1,6 @@
 import React from 'react';
-import Interest from './subcomponents/Interest';
-import Skills from './subcomponents/Skills';
+import Interest from './subcomponents/interest/Interest';
+import Skills from './subcomponents/skills/Skills';
 
 const About = () => {
     return(

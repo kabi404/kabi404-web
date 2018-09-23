@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Nav from './components/Nav';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import Nav from './components/nav/Nav';
+import Content from './components/content/Content';
+import Footer from './components/footer/Footer';
 
 
 class App extends Component {
