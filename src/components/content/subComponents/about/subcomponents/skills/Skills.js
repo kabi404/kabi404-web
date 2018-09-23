@@ -32,14 +32,20 @@ class Skills extends Component {
                 </div>
 
                 <ul class="nav nav-pills mb-3 text-center justify-content-center" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-plan-tab" data-toggle="pill" href="#pills-plan" role="tab" aria-controls="pills-plan" aria-selected="true">Programming Languages</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link h3 active" id="pills-plan-tab" data-toggle="pill" href="#pills-plan" role="tab" aria-controls="pills-plan" aria-selected="true">
+                            <i class="fas fa-code"></i>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Databases</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link h3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                            <i class="fas fa-database"></i>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Other Technologies</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link h3" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                            <i class="fas fa-seedling"></i>
+                        </a>
                     </li>
                 </ul>
 
@@ -79,7 +85,7 @@ class Skills extends Component {
                                 <div class="card bg-light"><div class="card-body"><p class="display-1 text-center"><i class="fab fa-react"></i></p><p class="card-text text-center h5">React</p></div></div>
                             </div>
                             <div className="col-4">
-                                <div class="card bg-light"><div class="card-body"><p class="display-1 text-center"><i class="fas fa-code"></i></p><p class="card-text text-center h5">Code</p></div></div>
+                                <div class="card bg-light"><div class="card-body"><p class="display-1 text-center"><i class="fab fa-git-square"></i></p><p class="card-text text-center h5">Git</p></div></div>
                             </div>    
                         </div>
                     </div>

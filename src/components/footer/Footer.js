@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className="col-3 justify-content-center text-center my-3">
                     <a href="https://github.com/kabi404" className="text-white h1" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-github-alt"></i>
+                        <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>

@@ -12,11 +12,11 @@ const Interest = () => {
                     <div className="card bg-light">
                         <div className="card-body">
                             <p className="display-1 text-center">
-                                <i className="fas fa-code"></i>
+                                <i class="fas fa-microchip"></i>
                             </p>
 
                             <p className="card-text text-center h5">
-                                Code
+                                Technology
                             </p>
                         </div>
                     </div>
