@@ -49,8 +49,8 @@ class Skills extends Component {
                         </li>
                     </ul>
                 </div>
-                    <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <div className="row mb-4 mx-3 my-2">
+                <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div className="row mb-4 mx-3 my-2">
                         <div className="col-sm-3">
                             <div className="card bg-light">
                                 <div className="card-body">
@@ -105,14 +105,67 @@ class Skills extends Component {
                         </div>
                     </div>
 
-                    </div>
-                    <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                </div>
+                <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div className="row mb-4 mx-3 my-2">
+                        <div className="col-sm-3">
+                            <div className="card bg-light">
+                                <div className="card-body">
+                                    <p className="display-1 text-center">
+                                        <i className="fab fa-java"></i>
+                                    </p>
 
+                                    <p className="card-text text-center h5">
+                                        JAVA
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-3">
+                            <div className="card bg-light">
+                                <div className="card-body">
+                                    <p className="display-1 text-center">
+                                        <i className="fab fa-js-square"></i>
+                                    </p>
 
+                                    <p className="card-text text-center h5">
+                                        JavaScript
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-3">
+                            <div className="card bg-light">
+                                <div className="card-body">
+                                    <p className="display-1 text-center">
+                                        <i className="fab fa-php"></i>
+                                    </p>
+
+                                    <p className="card-text text-center h5">
+                                        PHP
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-3">
+                            <div className="card bg-light">
+                                <div className="card-body">
+                                    <p className="display-1 text-center">
+                                        <i className="fab fa-python"></i>
+                                    </p>
+
+                                    <p className="card-text text-center h5">
+                                        Python
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">loop</div>
 
                 </div>
+                <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">loop</div>
+
+            </div>
         )
     };
 }
