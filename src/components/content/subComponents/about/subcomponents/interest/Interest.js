@@ -25,11 +25,11 @@ const Interest = () => {
                     <div className="card bg-light">
                         <div className="card-body">
                             <p className="display-1 text-center">
-                                <i className="fas fa-flask"></i>
+                                <i class="fas fa-brain"></i>
                             </p>
 
                             <p className="card-text text-center h5">
-                                Science
+                                AI
                             </p>
                         </div>
                     </div>
