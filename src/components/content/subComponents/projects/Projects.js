@@ -14,7 +14,7 @@ const Projects = () => {
             </div>
 
             <div className = "row justify-content-center mx-2 mb-5">
-                <div className="col-6">
+                <div className="col-4">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingOne">
@@ -49,7 +49,15 @@ const Projects = () => {
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    
+                                    <p>
+                                        These are my ArtichokeCore projects.
+                                    </p>
+                                    <li className="ml-5">
+                                        <a>My Role Dices</a>
+                                    </li>
+                                    <li className="ml-5">
+                                        <a>Artichoke web</a>
+                                    </li>
                                 </div>
                             </div>
                         </div>
@@ -63,15 +71,32 @@ const Projects = () => {
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    
+                                <p>
+                                        These are my Rainy Nuts projects.
+                                    </p>
+                                    <li className="ml-5">
+                                        <a>Save Karin</a>
+                                    </li>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="col-6">
-
+                <div className="col-8">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Project category
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Project Name</h5>
+                            <p class="card-text">This is the project description. This is the project description. This is the project description. This is the project description. This is the project description. This is the project description. </p>
+                            <a href="#" class="h3"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            state
+                        </div>
+                    </div>
                 </div>
             </div>
 
