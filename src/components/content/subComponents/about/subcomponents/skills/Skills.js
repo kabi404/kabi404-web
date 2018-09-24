@@ -33,17 +33,17 @@ class Skills extends Component {
 
                 <ul class="nav nav-pills mb-3 text-center justify-content-center" id="pills-tab" role="tablist">
                     <li class="nav-item mx-2">
-                        <a class="nav-link h3 active" id="pills-plan-tab" data-toggle="pill" href="#pills-plan" role="tab" aria-controls="pills-plan" aria-selected="true">
+                        <a class="nav-link h3 active" id="pills-plan-tab" data-toggle="pill" title="Programming Languages" href="#pills-plan" role="tab" aria-controls="pills-plan" aria-selected="true">
                             <i class="fas fa-code"></i>
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link h3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                        <a class="nav-link h3" id="pills-profile-tab" data-toggle="pill" title="Databases" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
                             <i class="fas fa-database"></i>
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link h3" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                        <a class="nav-link h3" id="pills-contact-tab" data-toggle="pill" title="Other" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
                             <i class="fas fa-seedling"></i>
                         </a>
                     </li>
