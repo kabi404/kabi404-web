@@ -12,7 +12,7 @@ const Nav = () => {
                 <i className="fab fa-fort-awesome"></i>
             </a>
             <a className="nav-link text-white h2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                <i className="fas fa-user-circle"></i>
+                <i className="fas fa-user-astronaut"></i>
             </a>
             <a className="nav-link text-white h2" id="v-pills-projects-tab" data-toggle="pill" href="#v-pills-projects" role="tab" aria-controls="v-pills-projects" aria-selected="false">
                 <i className="fas fa-drafting-compass"></i>
@@ -20,9 +20,7 @@ const Nav = () => {
             <a className="nav-link text-white h2" id="v-pills-blog-tab" data-toggle="pill" href="#v-pills-blog" role="tab" aria-controls="v-pills-blog" aria-selected="false">
                 <i className="fas fa-feather-alt"></i>
             </a>
-            <a className="nav-link text-white h2" id="v-pills-gallery-tab" data-toggle="pill" href="#v-pills-gallery" role="tab" aria-controls="v-pills-gallery" aria-selected="false">
-                <i class="fas fa-camera-retro"></i>
-            </a>
+            
         </div>
     );
 }
