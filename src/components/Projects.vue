@@ -9,7 +9,7 @@
           </p>
       </div>
       <div class = "row justify-content-center mx-2 mb-5">
-          <div class="col-4">
+          <div class="col-3">
               <div class="accordion" id="accordionExample">
                   
                 <div v-for="team in teams" v-bind:key="team.name">
@@ -27,8 +27,8 @@
                                   {{team.description}}
                               </p>
                               <ul v-for="project in team.projects" v-bind:key="project.name">
-                                <li class="ml-5">
-                                    <a href="#">{{project.name}}</a>
+                                <li class="ml-0">
+                                    <a href="#" @click="setCurrentProject(project)">{{project.name}}</a>
                                 </li>
                               </ul>
                           </div>
@@ -37,18 +37,18 @@
                 </div>
               </div>
           </div>
-          <div class="col-8">
-              <div class="card text-center">
+          <div class="col-9">
+              <div class="card text-center" v-if="currentProject.name">
                   <div class="card-header">
-                      Project category
+                      v{{currentProject.version}}
                   </div>
                   <div class="card-body">
-                      <h5 class="card-title">Project Name</h5>
-                      <p class="card-text">This is the project description. This is the project description. This is the project description. This is the project description. This is the project description. This is the project description. </p>
-                      <a href="#" class="h3"><i class="fab fa-github"></i></a>
+                      <h5 class="card-title">{{currentProject.name}}</h5>
+                      <p class="card-text">{{currentProject.readme}} </p>
+                      <a v-bind:href="currentProject.url" target="_blank" class="h3"><i class="fab fa-github"></i></a>
                   </div>
                   <div class="card-footer text-muted">
-                      state
+                      {{currentProject.state}}
                   </div>
               </div>
           </div>
@@ -68,18 +68,24 @@ export default {
           projects: [
             {
               name: 'My Personal Web',
-              readme: '',
-              url:''
+              readme: 'In Progress',
+              url:'',
+              state:'In Progress',
+              version: '4.0'
             },
             {
               name: 'My Home',
               readme: '',
-              url:''
+              url:'',
+              state:'In Progress',
+              version: '0.0'
             },
             {
               name: 'Light Kana',
               readme: '',
-              url:''
+              url:'',
+              state:'In Progress',
+              version: '0.1'
             }
           ]
         },
@@ -90,12 +96,16 @@ export default {
             {
               name: 'My role dices',
               readme: '',
-              url:''
+              url:'',
+              state:'In Progress',
+              version: '0.0'
             },
             {
               name: 'Artichoke Web',
               readme: '',
-              url:''
+              url:'',
+              state:'In Progress',
+              version: '0.0'
             }
           ]
         },
@@ -106,12 +116,20 @@ export default {
             {
               name: 'Save Karin',
               readme: '',
-              url:''
+              url:'',
+              state:'In Progress',
+              version: '0.0'
             }
           ]
         }
-      ]
+      ],
+      currentProject: {}
     }
+  },
+  methods : {
+    setCurrentProject: function(project) {
+      this.currentProject = project;
+    },
   }
 }
 </script>
