@@ -28,7 +28,7 @@
                               </p>
                               <ul v-for="project in team.projects" v-bind:key="project.name">
                                 <li class="ml-5">
-                                    <a>{{project.name}}</a>
+                                    <a href="#">{{project.name}}</a>
                                 </li>
                               </ul>
                           </div>
@@ -63,14 +63,23 @@ export default {
     return {
       teams: [
         {
-          name: 'own',
+          name: 'Own',
           description: 'These are my own projects.',
           projects: [
             {
-              name: 'My Home'
+              name: 'My Personal Web',
+              readme: '',
+              url:''
             },
             {
-              name: 'Light Kana'
+              name: 'My Home',
+              readme: '',
+              url:''
+            },
+            {
+              name: 'Light Kana',
+              readme: '',
+              url:''
             }
           ]
         },
@@ -79,10 +88,14 @@ export default {
           description: 'These are my ArtichokeCore projects.',
           projects: [
             {
-              name: 'My role dices'
+              name: 'My role dices',
+              readme: '',
+              url:''
             },
             {
-              name: 'Artichoke Web'
+              name: 'Artichoke Web',
+              readme: '',
+              url:''
             }
           ]
         },
@@ -91,7 +104,9 @@ export default {
           description: 'These are my Rainy Nuts projects.',
           projects: [
             {
-              name: 'Save Karin'
+              name: 'Save Karin',
+              readme: '',
+              url:''
             }
           ]
         }
