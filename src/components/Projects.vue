@@ -11,69 +11,30 @@
       <div class = "row justify-content-center mx-2 mb-5">
           <div class="col-4">
               <div class="accordion" id="accordionExample">
+                  
+                <div v-for="team in teams" v-bind:key="team.name">
                   <div class="card">
                       <div class="card-header" id="headingOne">
                           <h5 class="mb-0">
-                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  Own projects
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" v-bind:data-target="'#'+team.name" aria-expanded="true" v-bind:aria-controls="team.name">
+                                  {{team.name}}
                               </button>
                           </h5>
                       </div>
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                          <div class="card-body">
+                      <div v-bind:id="team.name" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body" >
                               <p>
-                                  These are my own projects.
+                                  {{team.description}}
                               </p>
-                              <li class="ml-5">
-                                  <a>My Home</a>
-                              </li>
-                              <li class="ml-5">
-                                  <a>Light Kana</a>
-                              </li>
+                              <ul v-for="project in team.projects" v-bind:key="project.name">
+                                <li class="ml-5">
+                                    <a>{{project.name}}</a>
+                                </li>
+                              </ul>
                           </div>
                       </div>
                   </div>
-                  <div class="card">
-                      <div class="card-header" id="headingTwo">
-                          <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  ArtichokeCore
-                              </button>
-                          </h5>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                          <div class="card-body">
-                              <p>
-                                  These are my ArtichokeCore projects.
-                              </p>
-                              <li class="ml-5">
-                                  <a>My Role Dices</a>
-                              </li>
-                              <li class="ml-5">
-                                  <a>Artichoke web</a>
-                              </li>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="card">
-                      <div class="card-header" id="headingThree">
-                          <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Happy Nuts
-                              </button>
-                          </h5>
-                      </div>
-                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                          <div class="card-body">
-                          <p>
-                                  These are my Rainy Nuts projects.
-                              </p>
-                              <li class="ml-5">
-                                  <a>Save Karin</a>
-                              </li>
-                          </div>
-                      </div>
-                  </div>
+                </div>
               </div>
           </div>
           <div class="col-8">
@@ -126,7 +87,7 @@ export default {
           ]
         },
         {
-          name: 'Happy Nuts',
+          name: 'HappyNuts',
           description: 'These are my Rainy Nuts projects.',
           projects: [
             {
