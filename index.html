@@ -77,10 +77,40 @@
             </div>
           </section>
 
-          <aboutme></aboutme>
+          <aboutme
+            v-if="sections[0].isActive"
+          >
+          </aboutme>
 
 
     </div>
+
+    <footer class="footer m-t-xxl has-background-dark">
+      <div class="content">
+            <div class="columns has-text-centered">
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="mailto:kabi404@outlook.com" target="_blank">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://github.com/kabi404" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://twitter.com/kabi404" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://www.linkedin.com/in/kabi404/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+      </div>
+    </footer>
 
 
 
