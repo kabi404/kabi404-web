@@ -1,11 +1,6 @@
-var aboutme = require('./components/aboutme');
-var skills = require('./components/skills');
-var projects = require('./components/projects');
-var blog = require('./components/blog');
-var gallery = require('./components/gallery');
-
 var vue = new Vue({
     el: '#app',
+
     data: {
         sections: [
             {
@@ -50,3 +45,4 @@ var vue = new Vue({
         }
     }
 });
+
