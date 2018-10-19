@@ -71,8 +71,8 @@ var aboutme = Vue.component('aboutme', {
                     <div class="columns is-centered is-7 is-variable m-t-xxl">
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-left-tablet">About me</p>
-                                <p class="is-size-5 has-text-justified">{{text.hobbies[0]}}</p>
+                                <p class="is-size-2 has-text-left-tablet">{{text.hobbies.title[0]}}</p>
+                                <p class="is-size-5 has-text-justified">{{text.hobbies.content[0]}}</p>
                             </div>
                         </div>
                         <div class="column is-4">
@@ -90,8 +90,8 @@ var aboutme = Vue.component('aboutme', {
                         </div>
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-right-tablet">About me</p>
-                                <p class="is-size-5 has-text-justified">{{text.japan[0]}}</p>
+                                <p class="is-size-2 has-text-right-tablet">{{text.japan.title[0]}}</p>
+                                <p class="is-size-5 has-text-justified">{{text.japan.content[0]}}</p>
                             </div>
                         </div>
                     </div>
