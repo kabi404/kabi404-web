@@ -54,7 +54,7 @@ var aboutme = Vue.component('aboutme', {
 
             <div>
                 <div class="container">
-                    <div class="columns is-7 is-variable is-centered m-t-xl">
+                    <div class="columns is-7 is-variable is-centered m-t-xxl">
                         <div class="column is-4">
                             <figure class="image is-3by4">
                                 <img src="./img/wilson.png">
