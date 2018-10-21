@@ -1,1 +1,161 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css integrity=sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><title>Javier Parada</title></head><body><div id=app></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js integrity=sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js integrity=sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy crossorigin=anonymous></script><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.bb335a033c3b9e5d296a.js></script><script type=text/javascript src=/static/js/app.7315a80ace0365f72e78.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kabi404</title>
+
+    <!-- Bulma.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Bulma.css -->
+    <link rel="stylesheet" href="./css/margin.css">
+    
+</head>
+<body>
+    <div id="app">
+        <section id="navbarMenuHeroA" class="hero is-dark is-fullheight is-bold">
+            <div class="hero-head">
+              <nav class="navbar">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item is-size-1">
+                        <i class="fab fa-firefox"></i>
+                    </a>
+                  </div>
+                  <div class="navbar-menu">
+                    <div class="navbar-end">
+                      <a class="navbar-item is-size-3" href="mailto:kabi404@outlook.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                      <a class="navbar-item is-size-3" href="https://github.com/kabi404" target="_blank">
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a class="navbar-item is-size-3" href="https://twitter.com/kabi404" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a class="navbar-item is-size-3" href="https://www.linkedin.com/in/kabi404/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+        
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <p class="title is-size-2">
+                  Javier Parada Tallante
+                </p>
+                <p class="subtitle is-size-4">
+                  Software Engineer
+                </p>
+              </div>
+            </div>
+        
+            <div class="hero-foot">
+              <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                  <ul>
+                    <template v-for="(section, index) of sections" :key="section.title">
+                        <li 
+                            :class="{'is-active': section.isActive}"
+                            class="is-size-3"
+                            @click="activeTab(index)"
+                        >
+                          <a><i v-bind:class="section.icon"></i></a>
+                        </li>
+                    </template>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </section>
+
+          <aboutme
+            v-if="sections[0].isActive"
+          >
+          </aboutme>
+
+          <skills
+            v-if="sections[1].isActive"
+          >
+          </skills>
+
+          <projects
+            v-if="sections[2].isActive"
+          >
+
+          </projects>
+
+          <blog
+            v-if="sections[3].isActive"
+          >
+          </blog>
+
+          <gallery
+            v-if="sections[4].isActive"
+          >
+          </gallery>
+
+
+    </div>
+
+    <footer class="footer m-t-xxl has-background-dark">
+      <div class="content">
+            <div class="columns has-text-centered">
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="mailto:kabi404@outlook.com" target="_blank">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://github.com/kabi404" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://twitter.com/kabi404" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+              <div class="column">
+                <a class="is-size-1 has-text-white" href="https://www.linkedin.com/in/kabi404/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- aboutme.js vue component -->
+    <script src="./components/aboutme.js"></script>
+
+    <!-- skills.js vue component -->
+    <script src="./components/skills.js"></script>
+
+    <!-- projects.js vue component -->
+    <script src="./components/projects.js"></script>
+
+    <!-- blog.js vue component -->
+    <script src="./components/blog.js"></script>
+
+    <!-- gallery.js vue component -->
+    <script src="./components/gallery.js"></script>
+
+    <!-- index.js -->
+    <script src="./index.js"></script>
+
+
+</body>
+</html>
