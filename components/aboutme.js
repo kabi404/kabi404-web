@@ -8,7 +8,7 @@ var aboutme = Vue.component('aboutme', {
                         'Sobre mi', 'About me', '私について'
                     ],
                     content: [
-                        'Hola, Soy Javi! Soy estudiante de Ingeniería de Software en la Universidad de Málaga.',
+                        'Hola, Soy Javi! Soy estudiante de Ingeniería de Software en la Universidad y soy Desarrollador Software. Me encanta la programación, la tecnología y en especial la Inteligencia Artificial. También tengo interés por otras disciplinas como la economía y la filosofía.',
                         '',
                         ''
                     ]
@@ -18,7 +18,7 @@ var aboutme = Vue.component('aboutme', {
                         'Mis aficiones', 'My hobbies', '私の趣味'
                     ],
                     content: [
-                        'Hola, Soy Javi! Soy estudiante de Ingeniería de Software en la Universidad de Málaga.',
+                        'Entre algunas de mis aficiones se encuentran los videojuegos, especialmente de género indie, la música y el cine de terror. También me encantan los zorros y todo lo que tenga que ver con ellos.',
                         '',
                         ''
                     ]
@@ -28,7 +28,7 @@ var aboutme = Vue.component('aboutme', {
                         'Sobre mi', 'About me', '私について'
                     ],
                     content: [
-                        'Hola, Soy Javi! Soy estudiante de Ingeniería de Software en la Universidad de Málaga.',
+                        'Soy un amante de la cultura japonesa, su historia y su idioma. Actualmente tambien estudio japonés en la Escuela Oficial de Idiomas.',
                         '',
                         ''
                     ]
@@ -62,7 +62,7 @@ var aboutme = Vue.component('aboutme', {
                         </div>
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-right-tablet">{{text.description.title[0]}}</p>
+                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.description.title[0]}}</p>
                                 <p class="is-size-5 has-text-justified">{{text.description.content[0]}}</p>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ var aboutme = Vue.component('aboutme', {
                     <div class="columns is-centered is-7 is-variable m-t-xxl">
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-left-tablet">{{text.hobbies.title[0]}}</p>
+                                <p class="is-size-2 has-text-left-tablet m-b-md">{{text.hobbies.title[0]}}</p>
                                 <p class="is-size-5 has-text-justified">{{text.hobbies.content[0]}}</p>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ var aboutme = Vue.component('aboutme', {
                         </div>
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-right-tablet">{{text.japan.title[0]}}</p>
+                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.japan.title[0]}}</p>
                                 <p class="is-size-5 has-text-justified">{{text.japan.content[0]}}</p>
                             </div>
                         </div>
