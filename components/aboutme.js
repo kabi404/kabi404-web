@@ -1,4 +1,5 @@
 var aboutme = Vue.component('aboutme', {
+    props: ['lang'],
     
     data: function(){
         return {
@@ -33,7 +34,8 @@ var aboutme = Vue.component('aboutme', {
                         ''
                     ]
                 },
-            }
+            },
+            lan: this.lang
         }
     },
 
@@ -62,8 +64,8 @@ var aboutme = Vue.component('aboutme', {
                         </div>
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.description.title[0]}}</p>
-                                <p class="is-size-5 has-text-justified">{{text.description.content[0]}}</p>
+                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.description.title[lan]}}</p>
+                                <p class="is-size-5 has-text-justified">{{text.description.content[lan]}}</p>
                             </div>
                         </div>
                     </div>
@@ -71,8 +73,8 @@ var aboutme = Vue.component('aboutme', {
                     <div class="columns is-centered is-7 is-variable m-t-xxl">
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-left-tablet m-b-md">{{text.hobbies.title[0]}}</p>
-                                <p class="is-size-5 has-text-justified">{{text.hobbies.content[0]}}</p>
+                                <p class="is-size-2 has-text-left-tablet m-b-md">{{text.hobbies.title[lan]}}</p>
+                                <p class="is-size-5 has-text-justified">{{text.hobbies.content[lan]}}</p>
                             </div>
                         </div>
                         <div class="column is-4">
@@ -90,8 +92,8 @@ var aboutme = Vue.component('aboutme', {
                         </div>
                         <div class="column is-6 is-vertical-center">
                             <div>
-                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.japan.title[0]}}</p>
-                                <p class="is-size-5 has-text-justified">{{text.japan.content[0]}}</p>
+                                <p class="is-size-2 has-text-right-tablet m-b-md">{{text.japan.title[lan]}}</p>
+                                <p class="is-size-5 has-text-justified">{{text.japan.content[lan]}}</p>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 var skills = Vue.component('skills', {
+    props: ['lang'],
     
     data: function(){
         return {

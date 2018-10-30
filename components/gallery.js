@@ -1,4 +1,5 @@
 var gallery = Vue.component('gallery', {
+    props: ['lang'],
     
     data: function(){
         return {

@@ -1,4 +1,5 @@
 var projects = Vue.component('projects', {
+    props: ['lang'],
     
     data: function(){
         return {

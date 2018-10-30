@@ -50,10 +50,10 @@
             <div class="hero-body">
               <div class="container has-text-centered">
                 <p class="title is-size-2">
-                  Javier Parada Tallante
+                  {{text.name[lan]}}
                 </p>
                 <p class="subtitle is-size-4">
-                  Software Engineer
+                  {{text.job[lan]}}
                 </p>
               </div>
             </div>
@@ -79,27 +79,32 @@
 
           <aboutme
             v-if="sections[0].isActive"
+            v-bind:lang="lan"
           >
           </aboutme>
 
           <skills
             v-if="sections[1].isActive"
+            v-bind:lang="lan"
           >
           </skills>
 
           <projects
             v-if="sections[2].isActive"
+            v-bind:lang="lan"
           >
 
           </projects>
 
           <blog
             v-if="sections[3].isActive"
+            v-bind:lang="lan"
           >
           </blog>
 
           <gallery
             v-if="sections[4].isActive"
+            v-bind:lang="lan"
           >
           </gallery>
 

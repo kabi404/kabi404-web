@@ -1,4 +1,5 @@
 var blog = Vue.component('blog', {
+    props: ['lang'],
     
     data: function(){
         return {
