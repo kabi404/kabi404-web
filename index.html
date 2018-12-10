@@ -1,166 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>kabi404</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javier Parada</title>
 
-    <!-- Bulma.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <!-- Font-Awesome v5.4.1 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <!-- Typographies -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <!-- Bulma.css -->
-    <link rel="stylesheet" href="./css/margin.css">
-    
+  <!-- Bulma v0.7.2-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" type="text/css" href="./index.css">
+
+  <!-- JS -->
+  <script async type="text/javascript" src="./index.js"></script>
 </head>
+
 <body>
-    <div id="app">
-        <section id="navbarMenuHeroA" class="hero is-dark is-fullheight is-bold">
-            <div class="hero-head">
-              <nav class="navbar">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <a class="navbar-item is-size-1">
-                        <i class="fab fa-firefox"></i>
-                    </a>
-                  </div>
-                  <div class="navbar-menu">
-                    <div class="navbar-end">
-                      <a class="navbar-item is-size-3" href="mailto:kabi404@outlook.com" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                      </a>
-                      <a class="navbar-item is-size-3" href="https://github.com/kabi404" target="_blank">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a class="navbar-item is-size-3" href="https://twitter.com/kabi404" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                      <a class="navbar-item is-size-3" href="https://www.linkedin.com/in/kabi404/" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-        
-            <div class="hero-body">
-              <div class="container has-text-centered">
-                <p class="title is-size-2">
-                  {{text.name[lan]}}
-                </p>
-                <p class="subtitle is-size-4">
-                  {{text.job[lan]}}
-                </p>
-              </div>
-            </div>
-        
-            <div class="hero-foot">
-              <nav class="tabs is-boxed is-fullwidth">
-                <div class="container">
-                  <ul>
-                    <template v-for="(section, index) of sections" :key="section.title">
-                        <li 
-                            :class="{'is-active': section.isActive}"
-                            class="is-size-3"
-                            @click="activeTab(index)"
-                        >
-                          <a><i v-bind:class="section.icon"></i></a>
-                        </li>
-                    </template>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </section>
+  <!-- Start: Navbar -->
+  <nav class="navbar is-link is-fixed-top">
 
-          <aboutme
-            v-if="sections[0].isActive"
-            v-bind:lang="lan"
-          >
-          </aboutme>
-
-          <skills
-            v-if="sections[1].isActive"
-            v-bind:lang="lan"
-          >
-          </skills>
-
-          <projects
-            v-if="sections[2].isActive"
-            v-bind:lang="lan"
-          >
-
-          </projects>
-
-          <blog
-            v-if="sections[3].isActive"
-            v-bind:lang="lan"
-          >
-          </blog>
-
-          <gallery
-            v-if="sections[4].isActive"
-            v-bind:lang="lan"
-          >
-          </gallery>
-
-
+      <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="section-navbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
     </div>
 
-    <footer class="footer m-t-xxl has-background-dark">
-      <div class="content">
-            <div class="columns has-text-centered">
-              <div class="column">
-                <a class="is-size-1 has-text-white" href="mailto:kabi404@outlook.com" target="_blank">
-                  <i class="fas fa-envelope"></i>
-                </a>
+    <div class="navbar-menu" id="section-navbar">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#about">
+          <span class="icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <span>Sobre mi</span>
+        </a>
+        <a class="navbar-item" href="#services">
+          <span class="icon">
+            <i class="fas fa-coffee"></i>
+          </span>
+          <span>Servicios</span>
+        </a>
+        <a class="navbar-item" href="#cv">
+          <span class="icon">
+            <i class="fas fa-file-alt"></i>
+          </span>
+          <span>CV</span>
+        </a>
+        <a class="navbar-item" href="#projects">
+          <span class="icon">
+            <i class="fas fa-grip-horizontal"></i>
+          </span>
+          <span>Proyectos</span>
+        </a>
+        <a class="navbar-item" href="#contact">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contacto</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- End: Navbar -->
+
+  <!-- Header -->
+  <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">Hola! soy
+        <h1 class="title is-1">
+          Javier Parada
+        </h1>
+        <h2 class="subtitle is-3">
+          Ingeniero de Software
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start: About -->
+  <section class="section" id="about">
+    <div class="section-heading">
+      <h3 class="title is-2">Sobre mi</h3>
+      <h4 class="subtitle is-5">El buen código es su mejor documentación</h4>
+      <div class="container">
+        <p>
+          Desarrollador Software con <strong>3 años</strong> de experiencia. Graduado en
+          <strong>Ingeniería de Software</strong>, con conocimientos de <strong>Arquitectura de Software</strong>, 
+          técnicas <strong>Web</strong> modernas y <strong>Aplicaciones Móviles</strong>.
+          Amante de los zorros y la cultura japonesa.
+        </p>
+      </div>
+    </div>
+
+    <div class="columns has-same-height is-gapless">
+      <div class="column">
+        <!-- Profile -->
+        <div class="card">
+          <div class="card-content">
+            <h3 class="title is-4">Perfil</h3>
+
+            <div class="content">
+              <table class="table-profile">
+                <tr>
+                  <th colspan="1"></th>
+                  <th colspan="2"></th>
+                </tr>
+                <tr>
+                  <td>Nombre:</td>
+                  <td>Javier Parada</td>
+                </tr>
+                <tr>
+                  <td>Profesión:</td>
+                  <td>Ingeniero de Software</td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td>kabi404@outlook.com</td>
+                </tr>
+              </table>
+            </div>
+            <br>
+            <div class="buttons has-addons is-centered">
+              <a href="https://github.com/kabi404" class="button is-link is-size-5"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/kabi404/" class="button is-link is-size-5"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://twitter.com/kabi404" class="button is-link is-size-5"><i class="fab fa-twitter"></i></a>
+              <a href="mailto:kabi404@outlook.com" class="button is-link is-size-5"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- Profile picture -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./img/fox.jpg" alt="Placeholder image">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- Skills -->
+        <div class="card">
+          <div class="card-content skills-content">
+            <h3 class="title is-4">Habilidades</h3>
+            <div class="content">
+
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>JAVA</strong>
+                      <br>
+                      <progress class="progress is-primary" value="100" max="100"></progress>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>JavaScript</strong>
+                      <br>
+                      <progress class="progress is-primary" value="100" max="100"></progress>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Node.js</strong>
+                      <br>
+                      <progress class="progress is-primary" value="75" max="100"></progress>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Bases de Datos</strong>
+                      <br>
+                      <progress class="progress is-primary" value="90" max="100"></progress>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>日本語</strong>
+                        <br>
+                        <progress class="progress is-primary" value="40" max="100"></progress>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: About -->
+
+  <!-- Start: Skills tags -->
+   <br>
+        <div class="tags custom-tags">
+          <span class="tag is-light">UML</span>
+          <span class="tag is-light">JAVA</span>
+          <span class="tag is-light">JavaScript</span>
+          <span class="tag is-light">Node.js</span>
+          <span class="tag is-light">Android</span>
+          <span class="tag is-light">iOS</span>
+          <span class="tag is-light">MongoDB</span>
+          <span class="tag is-light">MySQL</span>
+          <span class="tag is-light">HTML5</span>
+          <span class="tag is-light">Vue.js</span>
+          <span class="tag is-light">Bootstrap</span>
+          <span class="tag is-light">Bulma</span>
+          <span class="tag is-light">Swift</span>
+          <span class="tag is-light">Spring</span>
+          <span class="tag is-light">Java EE</span>
+          <span class="tag is-light">PHP</span>
+        </div> 
+  <!-- End: Skills tags -->
+
+  <!-- Start: Services -->
+  <section class="section" id="services">
+    <div class="section-heading">
+      <h3 class="title is-2">Servicios</h3>
+      <h4 class="subtitle is-5">¿Qué puedo hacer por ti?</h4>
+    </div>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Ingeniería del Software</h4>
+              Gestión de Proyectos Software, Arquitectura y Diseño de Software con el lenguaje UML.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Desarrollo Web Full-Stack</h4>
+              Front-end con Vue.js, Bulma, Bootstrap. Back-end con 
+              Spring, Java EE, Node.js, MongoDB y MySQL.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Desarrollo de Aplicaciones Móviles</h4>
+              Desarrollo de aplicaciones nativas en JAVA para Android y Swift para iOS.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h4 class="title is-5">Desarrollo de Aplicaciones de Escritorio</h4>
+              Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Services -->
+
+  <!-- Start: CV -->
+  <section class="section" id="cv">
+    <div class="section-heading">
+      <h3 class="title is-2">Curriculum Vitae</h3>
+      <h4 class="subtitle is-5">Más sobre mi</h4>
+      <a href="#" class="button is-link is-medium">
+        <span class="icon">
+          <i class="fas fa-file-alt"></i>
+        </span>
+        <span>Descarga mi CV</span>
+      </a>
+    </div>
+  </section>
+  <!-- End: CV -->
+
+  <!-- Start: Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Proyectos</h3>
+        <h4 class="subtitle is-5">Mis últimos trabajos</h4>
+      </div>
+      <br>
+
+      <div class="container portfolio-container">
+        <div class="columns">
+          <div class="column is-4">
+            <!-- Kanami -->
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span>Kanami</span>
+                  <span class="is-pulled-right">
+                    <a href="#">
+                      <span class="tag is-default">v0.0.0</span>
+                    </a>
+                    <span class="tag is-default">Desktop</span>
+                    <span class="tag is-danger">WIP</span>
+                  </span>
+                </p>
+              </header>
+              <div class="card-content">
+                <figure class="image">
+                  <img src="#" alt="Screenshot">
+                </figure>
               </div>
-              <div class="column">
-                <a class="is-size-1 has-text-white" href="https://github.com/kabi404" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Web</a>
+                <a href="https://github.com/kabi404/kanami" class="card-footer-item">Source
+                  Code</a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-4">
+            <!-- PPCE -->
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span>PPCE</span>
+                  <span class="is-pulled-right">
+                    <a href="https://github.com/jgthms/bulma/releases/tag/0.7.2">
+                      <span class="tag is-default">v0.0.0</span>
+                    </a>
+                    <span class="tag is-default">Web</span>
+                    <span class="tag is-danger">WIP</span>
+                  </span>
+                </p>
+              </header>
+              <div class="card-content">
+                <figure class="image">
+                  <img src="#" alt="Screenshot">
+                </figure>
               </div>
-              <div class="column">
-                <a class="is-size-1 has-text-white" href="https://twitter.com/kabi404" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Web</a>
+                <a href="#" class="card-footer-item">Source
+                  Code</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column is-4">
+            <!-- myHome -->
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span>My Home</span>
+                  <span class="is-pulled-right">
+                    <a href="https://github.com/kabi404/kabi404.github.io">
+                      <span class="tag is-default">v0.0.0</span>
+                    </a>
+                    <span class="tag is-default">Web</span>
+                    <span class="tag is-danger">WIP</span>
+                  </span>
+                </p>
+              </header>
+              <div class="card-content">
+                <figure class="image">
+                  <img src="#" alt="Screenshot">
+                </figure>
               </div>
-              <div class="column">
-                <a class="is-size-1 has-text-white" href="https://www.linkedin.com/in/kabi404/" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Web</a>
+                <a href="https://github.com/kabi404/myhome" class="card-footer-item">Source
+                  Code</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Projects -->
+
+  <!-- Start: Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Contacto</h3>
+        <h4 class="subtitle is-5">No lo dudes</h4>
+      </div>
+      <br>
+
+      <div class="columns">
+        <div class="column is-6 is-offset-3">
+          <div class="box">
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Nombre">
               </div>
             </div>
+
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left">
+                <input class="input" type="email" placeholder="Foxo@inari.com" value="">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Mensaje</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Mensaje"></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped has-text-centered">
+              <div class="control">
+                <button class="button is-link is-large"><span class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Enviar</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
 
-
-
-    <!-- Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-    <!-- aboutme.js vue component -->
-    <script src="./components/aboutme.js"></script>
-
-    <!-- skills.js vue component -->
-    <script src="./components/skills.js"></script>
-
-    <!-- projects.js vue component -->
-    <script src="./components/projects.js"></script>
-
-    <!-- blog.js vue component -->
-    <script src="./components/blog.js"></script>
-
-    <!-- gallery.js vue component -->
-    <script src="./components/gallery.js"></script>
-
-    <!-- index.js -->
-    <script src="./index.js"></script>
-
+    </div>
+  </section>
+  <!-- End: Contact -->
 
 </body>
+
 </html>
