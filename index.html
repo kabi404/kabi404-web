@@ -21,483 +21,486 @@
   <!-- CSS stylesheets -->
   <link rel="stylesheet" type="text/css" href="./index.css">
 
-  <!-- JS -->
-  <script async type="text/javascript" src="./index.js"></script>
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
 </head>
 
 <body>
-  <!-- Start: Navbar -->
-  <nav class="navbar is-link is-fixed-top">
+  <div id="app">
+    <!-- Start: Navbar -->
+    <nav class="navbar is-link is-fixed-top">
 
       <div class="navbar-brand">
-          <div class="navbar-burger burger" data-target="section-navbar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-    </div>
-
-    <div class="navbar-menu" id="section-navbar">
-      <div class="navbar-end">
-        <a class="navbar-item" href="#about">
-          <span class="icon">
-            <i class="fas fa-user"></i>
-          </span>
-          <span>Sobre mi</span>
-        </a>
-        <a class="navbar-item" href="#services">
-          <span class="icon">
-            <i class="fas fa-coffee"></i>
-          </span>
-          <span>Servicios</span>
-        </a>
-        <a class="navbar-item" href="#cv">
-          <span class="icon">
-            <i class="fas fa-file-alt"></i>
-          </span>
-          <span>CV</span>
-        </a>
-        <a class="navbar-item" href="#projects">
-          <span class="icon">
-            <i class="fas fa-grip-horizontal"></i>
-          </span>
-          <span>Proyectos</span>
-        </a>
-        <a class="navbar-item" href="#contact">
-          <span class="icon">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span>Contacto</span>
-        </a>
+        <div class="navbar-burger burger" data-target="section-navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- End: Navbar -->
 
-  <!-- Header -->
-  <section class="hero is-link is-fullheight is-fullheight-with-navbar">
-    <div class="hero-body">
-      <div class="container">Hola! soy
-        <h1 class="title is-1">
-          Javier Parada
-        </h1>
-        <h2 class="subtitle is-3">
-          Ingeniero de Software
-        </h2>
+      <div class="navbar-menu" id="section-navbar">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#about">
+            <span class="icon">
+              <i class="fas fa-user"></i>
+            </span>
+            <span>{{langify('ABOUT_ME')}}</span>
+          </a>
+          <a class="navbar-item" href="#services">
+            <span class="icon">
+              <i class="fas fa-coffee"></i>
+            </span>
+            <span>{{langify('SERVICES')}}</span>
+          </a>
+          <a class="navbar-item" href="#cv">
+            <span class="icon">
+              <i class="fas fa-file-alt"></i>
+            </span>
+            <span>{{langify('CV')}}</span>
+          </a>
+          <a class="navbar-item" href="#projects">
+            <span class="icon">
+              <i class="fas fa-grip-horizontal"></i>
+            </span>
+            <span>{{langify('PROJECTS')}}</span>
+          </a>
+          <a class="navbar-item" href="#contact">
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span>{{langify('CONTACT')}}</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </nav>
+    <!-- End: Navbar -->
 
-  <!-- Start: About -->
-  <section class="section" id="about">
-    <div class="section-heading">
-      <h3 class="title is-2">Sobre mi</h3>
-      <h4 class="subtitle is-5">El buen código es su mejor documentación</h4>
-      <div class="container">
-        <p>
-          Desarrollador Software con <strong>3 años</strong> de experiencia. Graduado en
-          <strong>Ingeniería de Software</strong>, con conocimientos de <strong>Arquitectura de Software</strong>, 
-          técnicas <strong>Web</strong> modernas y <strong>Aplicaciones Móviles</strong>.
-          Amante de los zorros y la cultura japonesa.
-        </p>
+    <!-- Header -->
+    <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">{{langify('HI_IM')}}
+          <h1 class="title is-1">
+            {{langify('JAVIER_PARADA')}}
+          </h1>
+          <h2 class="subtitle is-3">
+            {{langify('SOFTWARE_ENGINEER')}}
+          </h2>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="columns has-same-height is-gapless">
-      <div class="column">
-        <!-- Profile -->
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title is-4">Perfil</h3>
+    <!-- Start: About -->
+    <section class="section" id="about">
+      <div class="section-heading">
+        <h3 class="title is-2">{{langify('ABOUT_ME')}}</h3>
+        <h4 class="subtitle is-5">{{langify('GOOD_CODE_IS_THE_BEST_DOCUMENTATION')}}</h4>
+        <div class="container">
+          <p v-html="langify('ABOUT_ME_CONTENT')">
+          </p>
+        </div>
+      </div>
 
-            <div class="content">
-              <table class="table-profile">
-                <tr>
-                  <th colspan="1"></th>
-                  <th colspan="2"></th>
-                </tr>
-                <tr>
-                  <td>Nombre:</td>
-                  <td>Javier Parada</td>
-                </tr>
-                <tr>
-                  <td>Profesión:</td>
-                  <td>Ingeniero de Software</td>
-                </tr>
-                <tr>
-                  <td>Email:</td>
-                  <td>kabi404@outlook.com</td>
-                </tr>
-              </table>
-            </div>
-            <br>
-            <div class="buttons has-addons is-centered">
-              <a href="https://github.com/kabi404" class="button is-link is-size-5" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/kabi404/" class="button is-link is-size-5" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://twitter.com/kabi404" class="button is-link is-size-5" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="mailto:kabi404@outlook.com" class="button is-link is-size-5">
-                <i class="fas fa-envelope"></i>
-              </a>
+      <div class="columns has-same-height is-gapless">
+        <div class="column">
+          <!-- Profile -->
+          <div class="card">
+            <div class="card-content">
+              <h3 class="title is-4">{{langify('PROFILE')}}</h3>
+
+              <div class="content">
+                <table class="table-profile">
+                  <tr>
+                    <th colspan="1"></th>
+                    <th colspan="2"></th>
+                  </tr>
+                  <tr>
+                    <td>{{langify('NAME')}}:</td>
+                    <td>{{langify('JAVIER_PARADA')}}</td>
+                  </tr>
+                  <tr>
+                    <td>{{langify('PROFESSION')}}:</td>
+                    <td>{{langify('SOFTWARE_ENGINEER')}}</td>
+                  </tr>
+                  <tr>
+                    <td>{{langify('EMAIL')}}:</td>
+                    <td>kabi404@outlook.com</td>
+                  </tr>
+                </table>
+              </div>
+              <br>
+              <div class="buttons has-addons is-centered">
+                <a href="https://github.com/kabi404" class="button is-link is-size-5" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kabi404/" class="button is-link is-size-5" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/kabi404" class="button is-link is-size-5" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:kabi404@outlook.com" class="button is-link is-size-5">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column">
-        <!-- Profile picture -->
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./img/fox.jpg" alt="Placeholder image">
-            </figure>
+        <div class="column">
+          <!-- Profile picture -->
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="./img/fox.jpg" alt="Placeholder image">
+              </figure>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="column">
-        <!-- Skills -->
-        <div class="card">
-          <div class="card-content skills-content">
-            <h3 class="title is-4">Habilidades</h3>
-            <div class="content">
+        <div class="column">
+          <!-- Skills -->
+          <div class="card">
+            <div class="card-content skills-content">
+              <h3 class="title is-4">{{langify('MAIN_SKILLS')}}</h3>
+              <div class="content">
 
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Ingeniería del Software</strong>
-                      <br>
-                      <progress class="progress is-primary" value="100" max="100"></progress>
-                    </p>
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>{{langify('SOFTWARE_ENGINEER')}}</strong>
+                        <br>
+                        <progress class="progress is-primary" value="100" max="100"></progress>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Desarrollo Web</strong>
-                      <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
-                    </p>
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>{{langify('WEB_DEVELOPMENT')}}</strong>
+                        <br>
+                        <progress class="progress is-primary" value="90" max="100"></progress>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Desarrollo Móvil</strong>
-                      <br>
-                      <progress class="progress is-primary" value="70" max="100"></progress>
-                    </p>
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>{{langify('MOBILE_DEVELOPMENT')}}</strong>
+                        <br>
+                        <progress class="progress is-primary" value="70" max="100"></progress>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Bases de Datos</strong>
-                      <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
-                    </p>
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>{{langify('DATABASES')}}</strong>
+                        <br>
+                        <progress class="progress is-primary" value="90" max="100"></progress>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="media">
+                <article class="media">
                   <div class="media-content">
                     <div class="content">
                       <p>
                         <strong>日本語</strong>
                         <br>
-                        <progress class="progress is-primary" value="40" max="100"></progress>
+                        <progress class="progress is-primary" value="30" max="100"></progress>
                       </p>
                     </div>
                   </div>
                 </article>
-              
+
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <!-- End: About -->
+
+    <!-- Start: Skills tags -->
+    <br>
+    <div class="tags custom-tags">
+      <span class="tag is-light">UML</span>
+      <span class="tag is-light">JAVA</span>
+      <span class="tag is-light">JavaScript</span>
+      <span class="tag is-light">Node.js</span>
+      <span class="tag is-light">Android</span>
+      <span class="tag is-light">iOS</span>
+      <span class="tag is-light">Git</span>
+      <span class="tag is-light">MongoDB</span>
+      <span class="tag is-light">MySQL</span>
+      <span class="tag is-light">SQL Server</span>
+      <span class="tag is-light">Oracle SQL</span>
+      <span class="tag is-light">HTML5</span>
+      <span class="tag is-light">Vue.js</span>
+      <span class="tag is-light">Bootstrap</span>
+      <span class="tag is-light">Bulma</span>
+      <span class="tag is-light">jQuery</span>
+      <span class="tag is-light">Electron</span>
+      <span class="tag is-light">Swift</span>
+      <span class="tag is-light">Spring</span>
+      <span class="tag is-light">Java EE</span>
+      <span class="tag is-light">PHP</span>
     </div>
-  </section>
-  <!-- End: About -->
+    <!-- End: Skills tags -->
 
-  <!-- Start: Skills tags -->
-   <br>
-        <div class="tags custom-tags">
-          <span class="tag is-light">UML</span>
-          <span class="tag is-light">JAVA</span>
-          <span class="tag is-light">JavaScript</span>
-          <span class="tag is-light">Node.js</span>
-          <span class="tag is-light">Android</span>
-          <span class="tag is-light">iOS</span>
-          <span class="tag is-light">Git</span>
-          <span class="tag is-light">MongoDB</span>
-          <span class="tag is-light">MySQL</span>
-          <span class="tag is-light">SQL Server</span>
-          <span class="tag is-light">Oracle SQL</span>
-          <span class="tag is-light">HTML5</span>
-          <span class="tag is-light">Vue.js</span>
-          <span class="tag is-light">Bootstrap</span>
-          <span class="tag is-light">Bulma</span>
-          <span class="tag is-light">jQuery</span>
-          <span class="tag is-light">Electron</span>
-          <span class="tag is-light">Swift</span>
-          <span class="tag is-light">Spring</span>
-          <span class="tag is-light">Java EE</span>
-          <span class="tag is-light">PHP</span>
-        </div> 
-  <!-- End: Skills tags -->
-
-  <!-- Start: Services -->
-  <section class="section" id="services">
-    <div class="section-heading">
-      <h3 class="title is-2">Servicios</h3>
-      <h4 class="subtitle is-5">¿Qué puedo hacer por ti?</h4>
-    </div>
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <div class="content">
-              <h4 class="title is-5">Ingeniería del Software</h4>
-              Gestión de Proyectos Software y Arquitectura y Diseño de Software con el lenguaje UML.
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="box">
-            <div class="content">
-              <h4 class="title is-5">Desarrollo Web Full-Stack</h4>
-              Front-end con Vue.js, Bulma y Bootstrap. Back-end con 
-              Spring, Java EE, Node.js, MongoDB y MySQL.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <div class="content">
-              <h4 class="title is-5">Desarrollo de Aplicaciones Móviles</h4>
-              Desarrollo de aplicaciones nativas en JAVA para Android y Swift para iOS con API REST.
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="box">
-            <div class="content">
-              <h4 class="title is-5">Desarrollo de Aplicaciones de Escritorio</h4>
-              Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End: Services -->
-
-  <!-- Start: CV -->
-  <section class="section" id="cv">
-    <div class="section-heading">
-      <h3 class="title is-2">Curriculum Vitae</h3>
-      <h4 class="subtitle is-5">Más sobre mi</h4>
-
-      <div class="columns">
-        <div class="column">
-          <a href="#" class="button is-link is-medium">
-            <span class="icon">
-              <i class="fas fa-file-alt"></i>
-            </span>
-            <span>Descarga mi CV</span>
-          </a>
-        </div>
-      </div>
-      <div class="columns">
-          <div class="column">
-              <div class="control has-text-centered">
-                  <label class="radio">
-                    <input type="radio" name="answer" checked>
-                    Español
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer">
-                    Inglés
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer">
-                    Japonés
-                  </label>
-                </div>
-          </div>
-        </div>
-    </div>
-  </section>
-  <!-- End: CV -->
-
-  <!-- Start: Projects -->
-  <section class="section" id="projects">
-    <div class="container">
+    <!-- Start: Services -->
+    <section class="section" id="services">
       <div class="section-heading">
-        <h3 class="title is-2">Proyectos</h3>
-        <h4 class="subtitle is-5">Mis últimos trabajos</h4>
+        <h3 class="title is-2">{{langify('SERVICES')}}</h3>
+        <h4 class="subtitle is-5">{{langify('WHAT_CAN_I_DO_FOR_YOU')}}</h4>
       </div>
-      <br>
-
-      <div class="container portfolio-container">
+      <div class="container">
         <div class="columns">
-          <div class="column is-4">
-            <!-- Kanami -->
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span>Kanami</span>
-                  <span class="is-pulled-right">
-                    <a href="#">
-                      <span class="tag is-default">v0.0.0</span>
-                    </a>
-                    <span class="tag is-default">Desktop</span>
-                    <span class="tag is-danger">WIP</span>
-                  </span>
-                </p>
-              </header>
-              <div class="card-content">
-                <figure class="image">
-                  <img src="#" alt="Screenshot">
-                </figure>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-5">{{langify('SOFTWARE_ENGINEERING')}}</h4>
+                Gestión de Proyectos Software y Arquitectura y Diseño de Software con el lenguaje UML.
               </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">Web</a>
-                <a href="https://github.com/kabi404/kanami" class="card-footer-item">Source
-                  Code</a>
-              </footer>
             </div>
           </div>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-5">
+                    {{langify('FULL-STACK_WEB_DEVELOPMENT')}}
+                </h4>
+                Front-end con Vue.js, Bulma y Bootstrap. Back-end con
+                Spring, Java EE, Node.js, MongoDB y MySQL.
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <div class="column is-4">
-            <!-- PPCE -->
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span>PPCE</span>
-                  <span class="is-pulled-right">
-                    <a href="https://github.com/jgthms/bulma/releases/tag/0.7.2">
-                      <span class="tag is-default">v0.0.0</span>
-                    </a>
-                    <span class="tag is-default">Web</span>
-                    <span class="tag is-danger">WIP</span>
-                  </span>
-                </p>
-              </header>
-              <div class="card-content">
-                <figure class="image">
-                  <img src="#" alt="Screenshot">
-                </figure>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-5">{{langify('MOBILE_APP_DEVELOPMENT')}}</h4>
+                Desarrollo de aplicaciones nativas en JAVA para Android y Swift para iOS con API REST.
               </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">Web</a>
-                <a href="#" class="card-footer-item">Source
-                  Code</a>
-              </footer>
             </div>
           </div>
-          <div class="column is-4">
-            <!-- myHome -->
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span>My Home</span>
-                  <span class="is-pulled-right">
-                    <a href="https://github.com/kabi404/kabi404.github.io">
-                      <span class="tag is-default">v0.0.0</span>
-                    </a>
-                    <span class="tag is-default">Web</span>
-                    <span class="tag is-danger">WIP</span>
-                  </span>
-                </p>
-              </header>
-              <div class="card-content">
-                <figure class="image">
-                  <img src="#" alt="Screenshot">
-                </figure>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-5">{{langify('DESKTOP_APP_DEVELOPMENT')}}</h4>
+                Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js
               </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">Web</a>
-                <a href="https://github.com/kabi404/myhome" class="card-footer-item">Source
-                  Code</a>
-              </footer>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End: Projects -->
+    </section>
+    <!-- End: Services -->
 
-  <!-- Start: Contact -->
-  <section class="section" id="contact">
-    <div class="container">
+    <!-- Start: CV -->
+    <section class="section" id="cv">
       <div class="section-heading">
-        <h3 class="title is-2">Contacto</h3>
-        <h4 class="subtitle is-5">No lo dudes</h4>
+        <h3 class="title is-2">{{langify('CURRICULUM_VITAE')}}</h3>
+        <h4 class="subtitle is-5">{{langify('MORE_ABOUT_ME')}}</h4>
+
+        <div class="columns">
+          <div class="column">
+            <a href="#" class="button is-link is-medium">
+              <span class="icon">
+                <i class="fas fa-file-alt"></i>
+              </span>
+              <span>{{langify('DOWNLOAD_MY_CV')}}</span>
+            </a>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="control has-text-centered">
+              <label class="radio">
+                <input type="radio" name="answer" checked>
+                {{langify('SPANISH')}}
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer">
+                {{langify('ENGLISH')}}
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer">
+                {{langify('JAPANESE')}}
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
-      <br>
+    </section>
+    <!-- End: CV -->
 
-      <div class="columns">
-        <div class="column is-6 is-offset-3">
-          <div class="box">
-            <div class="field">
-              <label class="label">Nombre</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Nombre">
+    <!-- Start: Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <h3 class="title is-2">{{langify('PROJECTS')}}</h3>
+          <h4 class="subtitle is-5">{{langify('MY_LATEST_PROJECTS')}}</h4>
+        </div>
+        <br>
+
+        <div class="container portfolio-container">
+          <div class="columns">
+            <div class="column is-4">
+              <!-- Kanami -->
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Kanami</span>
+                    <span class="is-pulled-right">
+                      <a href="#">
+                        <span class="tag is-default">v0.0.0</span>
+                      </a>
+                      <span class="tag is-default">Desktop</span>
+                      <span class="tag is-danger">WIP</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="#" alt="Screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item">Web</a>
+                  <a href="https://github.com/kabi404/kanami" class="card-footer-item">Source
+                    Code</a>
+                </footer>
               </div>
             </div>
 
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control has-icons-left">
-                <input class="input" type="email" placeholder="inari@foxmail.com" value="">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
+            <div class="column is-4">
+              <!-- PPCE -->
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>PPCE</span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/jgthms/bulma/releases/tag/0.7.2">
+                        <span class="tag is-default">v0.0.0</span>
+                      </a>
+                      <span class="tag is-default">Web</span>
+                      <span class="tag is-danger">WIP</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="#" alt="Screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item">Web</a>
+                  <a href="#" class="card-footer-item">Source
+                    Code</a>
+                </footer>
               </div>
             </div>
-
-            <div class="field">
-              <label class="label">Mensaje</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Mensaje"></textarea>
+            <div class="column is-4">
+              <!-- myHome -->
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>My Home</span>
+                    <span class="is-pulled-right">
+                      <a href="https://github.com/kabi404/kabi404.github.io">
+                        <span class="tag is-default">v0.0.0</span>
+                      </a>
+                      <span class="tag is-default">Web</span>
+                      <span class="tag is-danger">WIP</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="#" alt="Screenshot">
+                  </figure>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item">Web</a>
+                  <a href="https://github.com/kabi404/myhome" class="card-footer-item">Source
+                    Code</a>
+                </footer>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Projects -->
 
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-link is-large"><span class="icon">
+    <!-- Start: Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h3 class="title is-2">{{langify('CONTACT')}}</h3>
+          <h4 class="subtitle is-5">{{langify('LETS_DO_SOMETHING_GREAT')}}</h4>
+        </div>
+        <br>
+
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            <div class="box">
+              <div class="field">
+                <label class="label">{{langify('NAME')}}</label>
+                <div class="control">
+                  <input class="input" type="text" v-bind:placeholder="langify('NAME')">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">{{langify('EMAIL')}}</label>
+                <div class="control has-icons-left">
+                  <input class="input" type="email" placeholder="inari@foxmail.com" value="">
+                  <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
-                  <span>Enviar</span></button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">{{langify('MESSAGE')}}</label>
+                <div class="control">
+                  <textarea class="textarea" v-bind:placeholder="langify('MESSAGE')"></textarea>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link is-large"><span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>{{langify('SEND')}}</span></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
+    </section>
+    <!-- End: Contact -->
 
-    </div>
-  </section>
-  <!-- End: Contact -->
-
+    <!-- JS -->
+    <script src="./index.js"></script>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,187 @@
+{
+    "HI_IM": {
+        "es": "Hola! Soy",
+        "en": "Hello! I'm",
+        "jp": "こんにちは"
+    },
+    "JAVIER_PARADA": {
+        "es": "Javier Parada",
+        "en": "Javier Parada",
+        "jp": "パラだ・ハビエル"
+    },
+    "SOFTWARE_ENGINEER": {
+        "es": "Ingeniero de Software",
+        "en": "Software Engineer",
+        "jp": "ソフトウェアエンジニア"
+    },
+    "ABOUT_ME": {
+        "es": "Sobre mi",
+        "en": "About me",
+        "jp": ""
+    },
+    "SERVICES": {
+        "es": "Servicios",
+        "en": "Services",
+        "jp": ""
+    },
+    "CV": {
+        "es": "CV",
+        "en": "CV",
+        "jp": ""
+    },
+    "PROJECTS": {
+        "es": "Proyectos",
+        "en": "Projects",
+        "jp": ""
+    },
+    "CONTACT": {
+        "es": "Contacto",
+        "en": "Contact",
+        "jp": ""
+    },
+    "GOOD_CODE_IS_THE_BEST_DOCUMENTATION": {
+        "es": "El buen código es su mejor documentación",
+        "en": "Good code is the best documentation",
+        "jp": ""
+    },
+    "PROFILE": {
+        "es": "Perfil",
+        "en": "Profile",
+        "jp": ""
+    },
+    "NAME": {
+        "es": "Nombre",
+        "en": "Name",
+        "jp": ""
+    },
+    "PROFESSION": {
+        "es": "Profesión",
+        "en": "Profession",
+        "jp": ""
+    },
+    "EMAIL": {
+        "es": "Email",
+        "en": "Email",
+        "jp": ""
+    },
+    "MAIN_SKILLS": {
+        "es": "Habilidades",
+        "en": "Main Skills",
+        "jp": ""
+    },
+    "WEB_DEVELOPMENT": {
+        "es": "Desarrollo Web",
+        "en": "Web Development",
+        "jp": ""
+    },
+    "MOBILE_DEVELOPMENT": {
+        "es": "Desarrollo Móvil",
+        "en": "Mobile Development",
+        "jp": ""
+    },
+    "DATABASES": {
+        "es": "Bases de Datos",
+        "en": "Databases",
+        "jp": ""
+    },
+    "WHAT_CAN_I_DO_FOR_YOU": {
+        "es": "¿Qué puedo hacer por ti?",
+        "en": "What can I do for you?",
+        "jp": ""
+    },
+    "SOFTWARE_ENGINEERING": {
+        "es": "Ingeniería de Software",
+        "en": "Software Engineering",
+        "jp": ""
+    },
+    "FULL-STACK_WEB_DEVELOPMENT": {
+        "es": "Desarrollo Web Full-Stack",
+        "en": "Full-Stack Web Development",
+        "jp": ""
+    },
+    "MOBILE_APP_DEVELOPMENT": {
+        "es": "Desarrollo de Aplicaciones Móviles",
+        "en": "Mobile App Development",
+        "jp": ""
+    },
+    "DESKTOP_APP_DEVELOPMENT": {
+        "es": "Desarrollo de Aplicaciones de Escritorio",
+        "en": "Desktop App Development",
+        "jp": ""
+    },
+    "CURRICULUM_VITAE": {
+        "es": "Currículum Vitae",
+        "en": "Curriculum Vitae",
+        "jp": ""
+    },
+    "MORE_ABOUT_ME": {
+        "es": "Más sobre mi",
+        "en": "More about me",
+        "jp": ""
+    },
+    "DOWNLOAD_MY_CV": {
+        "es": "Descarga mi CV",
+        "en": "Download my CV",
+        "jp": ""
+    },
+    "SPANISH": {
+        "es": "Español",
+        "en": "Spanish",
+        "jp": ""
+    },
+    "ENGLISH": {
+        "es": "Inglés",
+        "en": "English",
+        "jp": ""
+    },
+    "JAPANESE": {
+        "es": "Japonés",
+        "en": "Japanese",
+        "jp": ""
+    },
+    "MY_LATEST_PROJECTS": {
+        "es": "Mis últimos trabajos",
+        "en": "My latest projects",
+        "jp": ""
+    },
+    "LETS_DO_SOMETHING_GREAT": {
+        "es": "Hagamos algo grande",
+        "en": "Let's do something great",
+        "jp": ""
+    },
+    "MESSAGE": {
+        "es": "Mensaje",
+        "en": "Message",
+        "jp": ""
+    },
+    "SEND": {
+        "es": "Enviar",
+        "en": "Send",
+        "jp": ""
+    },
+    "ABOUT_ME_CONTENT": {
+        "es": "Desarrollador Software con <strong>3 años</strong> de experiencia. Graduado en <strong>Ingeniería de Software</strong>, con conocimientos de <strong>Arquitectura de Software</strong>,técnicas <strong>Web</strong> modernas y <strong>Aplicaciones Móviles</strong>. Amante de los zorros y la cultura japonesa.",
+        "en": "Software Developer with <strong>3 years</strong> of experience. Graduated in <strong>Software Engineering</strong>, with knowledge of <strong>Software Architecture</strong>, modern <strong>Web</strong> techniques and <strong>Mobile Applications</strong>. Foxes and japanese culture lover.",
+        "jp": ""
+    },
+    "SOFTWARE_ENGINEERING_CONTENT": {
+        "es": "Gestión de Proyectos Software y Arquitectura y Diseño de Software con el lenguaje UML. ",
+        "en": "Software Project Management and Software Architecture and Design with UML language.",
+        "jp": ""
+    },
+    "FULL-STACK_WEB_DEVELOPMENT_CONTENT": {
+        "es": "Front-end con Vue.js, Bulma y Bootstrap. Back-end con Spring, Java EE, Node.js, MongoDB y MySQL. ",
+        "en": "Front-end with Vue.js, Bulma and Bootstrap. Back-end with Spring, Java EE, Node.js, MongoDB and MySQL.",
+        "jp": ""
+    },
+    "MOBILE_APP_DEVELOPMENT_CONTENT": {
+        "es": "Desarrollo de aplicaciones móviles nativas en JAVA para Android y Swift para iOS con API REST. ",
+        "en": "Native Mobile Applications Development with JAVA for Android and Swift for iOS with API REST.",
+        "jp": ""
+    },
+    "DESKTOP_APP_DEVELOPMENT_CONTENT": {
+        "es": "Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js ",
+        "en": "Desktop Applications Development with JAVA and with Web technologies based on Electron.js",
+        "jp": ""
+    }
+}
