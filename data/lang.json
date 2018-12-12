@@ -17,72 +17,72 @@
     "ABOUT_ME": {
         "es": "Sobre mi",
         "en": "About me",
-        "jp": ""
+        "jp": "私について"
     },
     "SERVICES": {
         "es": "Servicios",
         "en": "Services",
-        "jp": ""
+        "jp": "サービス"
     },
     "CV": {
         "es": "CV",
         "en": "CV",
-        "jp": ""
+        "jp": "CV"
     },
     "PROJECTS": {
         "es": "Proyectos",
         "en": "Projects",
-        "jp": ""
+        "jp": "プロジェクト"
     },
     "CONTACT": {
         "es": "Contacto",
         "en": "Contact",
-        "jp": ""
+        "jp": "連絡先"
     },
     "GOOD_CODE_IS_THE_BEST_DOCUMENTATION": {
         "es": "El buen código es su mejor documentación",
         "en": "Good code is the best documentation",
-        "jp": ""
+        "jp": "良いコードは最高のドキュメンテーションです"
     },
     "PROFILE": {
         "es": "Perfil",
         "en": "Profile",
-        "jp": ""
+        "jp": "プロフィール"
     },
     "NAME": {
         "es": "Nombre",
         "en": "Name",
-        "jp": ""
+        "jp": "名前"
     },
     "PROFESSION": {
         "es": "Profesión",
         "en": "Profession",
-        "jp": ""
+        "jp": "職業"
     },
     "EMAIL": {
         "es": "Email",
         "en": "Email",
-        "jp": ""
+        "jp": "メール"
     },
     "MAIN_SKILLS": {
         "es": "Habilidades",
         "en": "Main Skills",
-        "jp": ""
+        "jp": "能力"
     },
     "WEB_DEVELOPMENT": {
         "es": "Desarrollo Web",
         "en": "Web Development",
-        "jp": ""
+        "jp": "ウェブ開発"
     },
     "MOBILE_DEVELOPMENT": {
         "es": "Desarrollo Móvil",
         "en": "Mobile Development",
-        "jp": ""
+        "jp": "モバイル開発"
     },
     "DATABASES": {
         "es": "Bases de Datos",
         "en": "Databases",
-        "jp": ""
+        "jp": "データベース"
     },
     "WHAT_CAN_I_DO_FOR_YOU": {
         "es": "¿Qué puedo hacer por ti?",
@@ -92,72 +92,72 @@
     "SOFTWARE_ENGINEERING": {
         "es": "Ingeniería de Software",
         "en": "Software Engineering",
-        "jp": ""
+        "jp": "ソフトウェア工学"
     },
     "FULL-STACK_WEB_DEVELOPMENT": {
         "es": "Desarrollo Web Full-Stack",
         "en": "Full-Stack Web Development",
-        "jp": ""
+        "jp": "フルスタックWeb開発"
     },
     "MOBILE_APP_DEVELOPMENT": {
         "es": "Desarrollo de Aplicaciones Móviles",
         "en": "Mobile App Development",
-        "jp": ""
+        "jp": "モバイルアプリケーションの開発"
     },
     "DESKTOP_APP_DEVELOPMENT": {
         "es": "Desarrollo de Aplicaciones de Escritorio",
         "en": "Desktop App Development",
-        "jp": ""
+        "jp": "デスクトップアプリケーションの開発"
     },
     "CURRICULUM_VITAE": {
         "es": "Currículum Vitae",
         "en": "Curriculum Vitae",
-        "jp": ""
+        "jp": "履歴書"
     },
     "MORE_ABOUT_ME": {
         "es": "Más sobre mi",
         "en": "More about me",
-        "jp": ""
+        "jp": "私についてもっと"
     },
     "DOWNLOAD_MY_CV": {
         "es": "Descarga mi CV",
         "en": "Download my CV",
-        "jp": ""
+        "jp": "私のCVをダウンロードする"
     },
     "SPANISH": {
         "es": "Español",
         "en": "Spanish",
-        "jp": ""
+        "jp": "スペイン語"
     },
     "ENGLISH": {
         "es": "Inglés",
         "en": "English",
-        "jp": ""
+        "jp": "英語"
     },
     "JAPANESE": {
         "es": "Japonés",
         "en": "Japanese",
-        "jp": ""
+        "jp": "日本語"
     },
     "MY_LATEST_PROJECTS": {
         "es": "Mis últimos trabajos",
         "en": "My latest projects",
-        "jp": ""
+        "jp": "私の最新プロジェクト"
     },
     "LETS_DO_SOMETHING_GREAT": {
         "es": "Hagamos algo grande",
         "en": "Let's do something great",
-        "jp": ""
+        "jp": "素晴らしいことを作りましょう"
     },
     "MESSAGE": {
         "es": "Mensaje",
         "en": "Message",
-        "jp": ""
+        "jp": "メッセージ"
     },
     "SEND": {
         "es": "Enviar",
         "en": "Send",
-        "jp": ""
+        "jp": "送信する"
     },
     "ABOUT_ME_CONTENT": {
         "es": "Desarrollador Software con <strong>3 años</strong> de experiencia. Graduado en <strong>Ingeniería de Software</strong>, con conocimientos de <strong>Arquitectura de Software</strong>, técnicas <strong>Web</strong> modernas y <strong>Aplicaciones Móviles</strong>. Amante de los zorros y la cultura japonesa.",
