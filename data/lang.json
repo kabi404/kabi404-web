@@ -175,13 +175,13 @@
         "jp": ""
     },
     "MOBILE_APP_DEVELOPMENT_CONTENT": {
-        "es": "Desarrollo de aplicaciones móviles nativas en JAVA para Android y Swift para iOS con API REST. ",
-        "en": "Native Mobile Applications Development with JAVA for Android and Swift for iOS with API REST.",
+        "es": "Desarrollo de aplicaciones móviles nativas en JAVA para Android y Swift para iOS con conexión a API REST. ",
+        "en": "Native Mobile Applications Development with JAVA for Android and Swift for iOS with API REST conection.",
         "jp": ""
     },
     "DESKTOP_APP_DEVELOPMENT_CONTENT": {
-        "es": "Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js ",
-        "en": "Desktop Applications Development with JAVA and with Web technologies based on Electron.js",
+        "es": "Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js.",
+        "en": "Desktop Applications Development with JAVA and with Web technologies based on Electron.js.",
         "jp": ""
     }
 }
