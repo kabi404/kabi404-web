@@ -172,21 +172,21 @@
     "SOFTWARE_ENGINEERING_CONTENT": {
         "es": "Gestión de Proyectos Software y Arquitectura y Diseño de Software con el lenguaje UML. ",
         "en": "Software Project Management and Software Architecture and Design with UML language.",
-        "jp": ""
+        "jp": "ソフトウェアプロジェクト管理とソフトウェアアーキテクチャの設計UML言語で。"
     },
     "FULL-STACK_WEB_DEVELOPMENT_CONTENT": {
         "es": "Front-end con Vue.js, Bulma y Bootstrap. Back-end con Spring, Java EE, Node.js, MongoDB y MySQL. ",
         "en": "Front-end with Vue.js, Bulma and Bootstrap. Back-end with Spring, Java EE, Node.js, MongoDB and MySQL.",
-        "jp": ""
+        "jp": "フロントエンドはVue.jsとBulmaとBootstrapで。バックエンドはSpringとJava EEとNode.jsとMongoDBとMySQLで。"
     },
     "MOBILE_APP_DEVELOPMENT_CONTENT": {
         "es": "Desarrollo de aplicaciones móviles nativas en JAVA para Android y Swift para iOS con conexión a API REST. ",
         "en": "Native Mobile Applications Development with JAVA for Android and Swift for iOS with API REST conection.",
-        "jp": ""
+        "jp": "ネイティブモバイルアプリケーション開発*AndroidにJAVAで。iOSにSwiftで。そしてAPI REST接続で。"
     },
     "DESKTOP_APP_DEVELOPMENT_CONTENT": {
         "es": "Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js.",
         "en": "Desktop Applications Development with JAVA and with Web technologies based on Electron.js.",
-        "jp": ""
+        "jp": "デスクトップアプリケーション開発はJAVAとElectron.jsのウェブ技術で。"
     }
 }
