@@ -72,6 +72,28 @@
             </span>
             <span>{{langify('CONTACT')}}</span>
           </a>
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+                <span class="icon">
+                  <i class="fas fa-globe"></i>
+                </span>
+                <span>{{langify('LANGUAGE')}}</span>
+            </a>
+    
+            <div class="navbar-dropdown is-right">
+              <a class="navbar-item" @click="changeLang('es')">
+                <span>{{langify('SPANISH')}} 🇪🇸</span>
+              </a>
+              <a class="navbar-item" @click="changeLang('en')">
+                <span>{{langify('ENGLISH')}} 🇬🇧</span>
+              </a>
+              <a class="navbar-item" @click="changeLang('jp')">
+                <span>{{langify('JAPANESE')}} 🇯🇵</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </nav>

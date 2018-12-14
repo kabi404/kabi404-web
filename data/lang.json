@@ -39,6 +39,11 @@
         "en": "Contact",
         "jp": "連絡先"
     },
+    "LANGUAGE": {
+        "es": "Idioma",
+        "en": "Language",
+        "jp": "言語"
+    },
     "GOOD_CODE_IS_THE_BEST_DOCUMENTATION": {
         "es": "El buen código es su mejor documentación",
         "en": "Good code is the best documentation",

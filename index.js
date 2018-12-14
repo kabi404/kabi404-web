@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         lang: {},
-        currentLang: '',
+        currentLang: 'es',
 
         toggler: {
             burgerToggler: false,
@@ -14,12 +14,11 @@ var app = new Vue({
         if(navigator.language.includes('es'))
         {
             this.$data.currentLang = 'es';
+        } else if(navigator.language.includes('jp')){
+            this.$data.currentLang = 'jp';
         } else {
             this.$data.currentLang = 'en';
-        }
-            
-        //else if(navigator.language.contains('jp'))
-        //this.$data.currentLang = 'jp';      
+        }   
 
         this.getLangData();
     },
@@ -51,6 +50,10 @@ var app = new Vue({
         toggleBurger: function() {
             this.$data.toggler.burgerToggler = !this.$data.toggler.burgerToggler;
             this.$data.toggler.menuToggler = !this.$data.toggler.menuToggler;
+        },
+
+        changeLang: function(langId) {
+            this.$data.currentLang = langId;
         }
         
     },
