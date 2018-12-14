@@ -2,7 +2,12 @@ var app = new Vue({
     el: '#app',
     data: {
         lang: {},
-        currentLang: ''
+        currentLang: '',
+
+        toggler: {
+            burgerToggler: false,
+            menuToggler: false
+        }
     },
 
     created: function () {
@@ -41,7 +46,13 @@ var app = new Vue({
                 data = ''
             }
             return data;
+        },
+
+        toggleBurger: function() {
+            this.$data.toggler.burgerToggler = !this.$data.toggler.burgerToggler;
+            this.$data.toggler.menuToggler = !this.$data.toggler.menuToggler;
         }
+        
     },
 
     computed: {

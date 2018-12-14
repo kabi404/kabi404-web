@@ -32,14 +32,15 @@
     <nav class="navbar is-link is-fixed-top">
 
       <div class="navbar-brand">
-        <div class="navbar-burger burger" data-target="section-navbar">
+        <div class="navbar-burger burger" data-target="section-navbar" 
+            @click="toggleBurger" v-bind:class="{ 'is-active': toggler.burgerToggler }">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
 
-      <div class="navbar-menu" id="section-navbar">
+      <div class="navbar-menu" id="section-navbar" v-bind:class="{ 'is-active': toggler.menuToggler }">
         <div class="navbar-end">
           <a class="navbar-item" href="#about">
             <span class="icon">
