@@ -4,9 +4,12 @@ var app = new Vue({
         lang: {},
         currentLang: 'en',
 
+        const: {},
+
         toggler: {
             burgerToggler: false,
-            menuToggler: false
+            menuToggler: false,
+            radio: 'en'
         }
     },
 
@@ -14,17 +17,20 @@ var app = new Vue({
         const navLang = navigator.language || navigator.userLanguage;
         if(navLang.includes('es'))
         {
-            this.$data.currentLang = 'es';
+            this.changeLang('es');
         } else if(navLang.includes('jp')){
-            this.$data.currentLang = 'jp';
+            this.changeLang('jp');
         } else {
-            this.$data.currentLang = 'en';
+            this.changeLang('en');
         }   
 
         this.getLangData();
+
+        this.getConstData();
     },
 
     methods: {
+
         getLangData: function() {
             let $this = this;
             var xobj = new XMLHttpRequest();
@@ -33,6 +39,19 @@ var app = new Vue({
             xobj.onreadystatechange = function () {
                 if (xobj.readyState == 4 && xobj.status == "200") {
                     $this.$data.lang = JSON.parse(xobj.responseText);
+                }
+            };
+            xobj.send();
+        },
+
+        getConstData: function() {
+            let $this = this;
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', './data/const.json', true);
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    $this.$data.const = JSON.parse(xobj.responseText);
                 }
             };
             xobj.send();
@@ -55,6 +74,17 @@ var app = new Vue({
 
         changeLang: function(langId) {
             this.$data.currentLang = langId;
+            this.$data.toggler.radio = langId;
+        },
+
+        cvLink: function(currentLang) {
+            var link;
+            try {
+                link = this.$data.const.cvLink[currentLang];
+            } catch(err) {
+                link = '';
+            }
+            return link;
         }
         
     },

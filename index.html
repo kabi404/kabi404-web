@@ -342,7 +342,7 @@
 
         <div class="columns">
           <div class="column">
-            <a href="#" class="button is-link is-medium">
+            <a v-bind:href="cvLink(toggler.radio)" target="_blank" class="button is-link is-medium">
               <span class="icon">
                 <i class="fas fa-file-alt"></i>
               </span>
@@ -354,15 +354,15 @@
           <div class="column">
             <div class="control has-text-centered">
               <label class="radio">
-                <input type="radio" name="answer" checked>
+                <input type="radio" value="es" v-model="toggler.radio">
                 {{langify('SPANISH')}}
               </label>
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" value="en" v-model="toggler.radio">
                 {{langify('ENGLISH')}}
               </label>
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" value="jp" v-model="toggler.radio">
                 {{langify('JAPANESE')}}
               </label>
             </div>
