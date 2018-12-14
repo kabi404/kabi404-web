@@ -30,6 +30,9 @@
   <!-- CSS stylesheets -->
   <link rel="stylesheet" type="text/css" href="./index.css">
 
+  <!-- PageClip -->
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
 </head>
 
 <body>
@@ -483,21 +486,21 @@
         </div>
         <br>
 
-        <form action="https://send.pageclip.co/7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb/contact-form" class="pageclip-form" method="post">
+
           <div class="columns">
             <div class="column is-6 is-offset-3">
               <div class="box">
                 <div class="field">
                   <label class="label">{{langify('NAME')}}</label>
                   <div class="control">
-                    <input class="input" type="text" name="name" v-bind:placeholder="langify('NAME')">
+                    <input class="input" type="text" name="name" v-bind:placeholder="langify('NAME')" required>
                   </div>
                 </div>
 
                 <div class="field">
                   <label class="label">{{langify('EMAIL')}}</label>
                   <div class="control has-icons-left">
-                    <input class="input" type="email" name="email" placeholder="inari@foxmail.com" value="">
+                    <input class="input" type="email" name="email" placeholder="inari@foxmail.com" value="" required>
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
@@ -507,13 +510,13 @@
                 <div class="field">
                   <label class="label">{{langify('MESSAGE')}}</label>
                   <div class="control">
-                    <textarea class="textarea" name="message" v-bind:placeholder="langify('MESSAGE')"></textarea>
+                    <textarea class="textarea" name="message" v-bind:placeholder="langify('MESSAGE')" required></textarea>
                   </div>
                 </div>
 
                 <div class="field is-grouped">
                   <div class="control">
-                    <button type="submit" class="button is-link is-large pageclip-form__submit"><span class="icon">
+                    <button type="submit" @click="sendForm" class="button is-link is-large pageclip-form__submit"><span class="icon">
                         <i class="fas fa-envelope"></i>
                       </span>
                       <span>{{langify('SEND')}}</span></button>
@@ -522,7 +525,7 @@
               </div>
             </div>
           </div>
-        </form>
+
       </div>
     </section>
     <!-- End: Contact -->
@@ -530,8 +533,7 @@
     <!-- JS -->
     <script src="./index.js"></script>
 
-    <!-- PageClip -->
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    
   </div>
 </body>
 

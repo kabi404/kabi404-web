@@ -4,6 +4,8 @@ var app = new Vue({
         lang: {},
         currentLang: 'en',
 
+        pageclipAPIKey: '7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb',
+
         const: {},
 
         toggler: {
@@ -30,8 +32,19 @@ var app = new Vue({
     },
 
     methods: {
+        sendForm: function () {
+            var data = {
+                name: 'prueba',
+                email: 'prueba@example.com',
+                message: 'prueba'
+              }
+              Pageclip.send('7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb', 'contact-form', data, function (error, response) {
+                console.log('saved?', !!error, '; response:', error || response)
+              })
+        },
 
         getLangData: function() {
+            
             let $this = this;
             var xobj = new XMLHttpRequest();
             xobj.overrideMimeType("application/json");
