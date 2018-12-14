@@ -41,12 +41,18 @@ var app = new Vue({
 
     methods: {
         sendForm: function () {
-            alert(JSON.stringify(this.$data.pageclip));
+            var $this = this;
+
               Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
-                if(err) {
+                if(error) {
                     alert('ERROR');
                 } else {
                     alert('SUCCESS');
+                    $this.$data.pageclip.data = {
+                        email: '',
+                        name: '',
+                        message: ''
+                    }
                 }
               })
         },
