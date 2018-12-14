@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         lang: {},
-        currentLang: 'es',
+        currentLang: 'en',
 
         toggler: {
             burgerToggler: false,
@@ -11,10 +11,11 @@ var app = new Vue({
     },
 
     created: function () {
-        if(navigator.language.includes('es'))
+        const navLang = navigator.language || navigator.userLanguage;
+        if(navLang.includes('es'))
         {
             this.$data.currentLang = 'es';
-        } else if(navigator.language.includes('jp')){
+        } else if(navLang.includes('jp')){
             this.$data.currentLang = 'jp';
         } else {
             this.$data.currentLang = 'en';
