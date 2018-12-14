@@ -24,9 +24,6 @@
   <!-- Bulma v0.7.2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
 
-  <!-- PageClip -->
-  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-
   <!-- CSS stylesheets -->
   <link rel="stylesheet" type="text/css" href="./index.css">
 
@@ -92,13 +89,13 @@
     
             <div class="navbar-dropdown is-right">
               <a class="navbar-item" @click="changeLang('es')">
-                <span>{{langify('SPANISH')}} 🇪🇸</span>
+                <span>{{langify('SPANISH')}}</span>
               </a>
               <a class="navbar-item" @click="changeLang('en')">
-                <span>{{langify('ENGLISH')}} 🇬🇧</span>
+                <span>{{langify('ENGLISH')}}</span>
               </a>
               <a class="navbar-item" @click="changeLang('jp')">
-                <span>{{langify('JAPANESE')}} 🇯🇵</span>
+                <span>{{langify('JAPANESE')}}</span>
               </a>
             </div>
           </div>
@@ -479,6 +476,7 @@
 
     <!-- Start: Contact -->
     <section class="section" id="contact">
+
       <div class="container">
         <div class="section-heading">
           <h3 class="title is-2">{{langify('CONTACT')}}</h3>
@@ -486,6 +484,32 @@
         </div>
         <br>
 
+          <div class="columns is-centered" v-if="toggler.showSuccessSubmit">
+            <div class="column is-5">
+                <article class="message is-success">
+                    <div class="message-header">
+                      <p>{{langify('SUCCESS')}}</p>
+                      <button @click="closeNotifications" class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        {{langify('SUCCESS_CONTENT')}}
+                    </div>
+                  </article>
+            </div>
+          </div>
+          <div class="columns is-centered" v-if="toggler.showErrSubmit">
+              <div class="column is-5">
+                  <article class="message is-danger">
+                      <div class="message-header">
+                        <p>{{langify('ERROR')}}</p>
+                        <button @click="closeNotifications" class="delete" aria-label="delete"></button>
+                      </div>
+                      <div class="message-body">
+                          {{langify('ERROR_CONTENT')}}
+                      </div>
+                    </article>
+              </div>
+            </div>
 
           <div class="columns">
             <div class="column is-6 is-offset-3">

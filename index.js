@@ -19,7 +19,9 @@ var app = new Vue({
         toggler: {
             burgerToggler: false,
             menuToggler: false,
-            radio: 'en'
+            radio: 'en',
+            showSuccessSubmit: false,
+            showErrSubmit: false
         }
     },
 
@@ -45,9 +47,9 @@ var app = new Vue({
 
               Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
                 if(error) {
-                    alert('ERROR');
+                    $this.$data.toggler.showErrSubmit = true;
                 } else {
-                    alert('SUCCESS');
+                    $this.$data.toggler.showSuccessSubmit = true;
                     $this.$data.pageclip.data = {
                         email: '',
                         name: '',
@@ -97,6 +99,11 @@ var app = new Vue({
         toggleBurger: function() {
             this.$data.toggler.burgerToggler = !this.$data.toggler.burgerToggler;
             this.$data.toggler.menuToggler = !this.$data.toggler.menuToggler;
+        },
+
+        closeNotifications: function() {
+            this.$data.toggler.showSuccessSubmit = false;
+            this.$data.toggler.showErrSubmit = false;
         },
 
         changeLang: function(langId) {

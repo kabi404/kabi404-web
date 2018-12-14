@@ -188,5 +188,26 @@
         "es": "Desarrollo de aplicaciones de escritorio con JAVA y con tecnologías web basadas en Electron.js.",
         "en": "Desktop Applications Development with JAVA and with Web technologies based on Electron.js.",
         "jp": "デスクトップアプリケーション開発はJAVAとElectron.jsのウェブ技術で。"
+    },
+    "SUCCESS": {
+        "es": "Eniado!",
+        "en": "Success!",
+        "jp": "成功!"
+    },
+    "ERROR": {
+        "es": "Error :(",
+        "en": "Error :(",
+        "jp": "エラー :("
+    },
+    "SUCCESS_CONTENT": {
+        "es": "El envio se ha realizado con éxito :)",
+        "en": "The submit has been successful",
+        "jp": "提出が成功しました。"
+    },
+    "ERROR_CONTENT": {
+        "es": "Vaya, parece que se ha producido algún error durante el envio. Por favor inténtelo más tarde.",
+        "en": "It seems that there has been some error. Please try again later.",
+        "jp": "何らかのエラーがあったようです。 後でもう一度お試しください。"
     }
+
 }
