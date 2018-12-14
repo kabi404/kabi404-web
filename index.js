@@ -4,7 +4,15 @@ var app = new Vue({
         lang: {},
         currentLang: 'en',
 
-        pageclipAPIKey: '7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb',
+        pageclip: {
+            api: '7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb',
+            formNAme: 'contact-form',
+            data: {
+                email: '',
+                name: '',
+                message: ''
+            }
+        },
 
         const: {},
 
@@ -33,13 +41,13 @@ var app = new Vue({
 
     methods: {
         sendForm: function () {
-            var data = {
-                name: 'prueba',
-                email: 'prueba@example.com',
-                message: 'prueba'
-              }
-              Pageclip.send('7pTGdOe8zE2hqcQtLCzH5mDTQTOibBRb', 'contact-form', data, function (error, response) {
-                console.log('saved?', !!error, '; response:', error || response)
+            alert(JSON.stringify(this.$data.pageclip));
+              Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
+                if(err) {
+                    alert('ERROR');
+                } else {
+                    alert('SUCCESS');
+                }
               })
         },
 
