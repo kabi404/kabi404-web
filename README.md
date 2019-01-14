@@ -20,6 +20,7 @@ Navigate to [kabi404.me](https://www.kabi404.me/)
 * [JavaScript](https://www.javascript.com/) - Programming language
 * [Vue.js](https://vuejs.org/) - Javascript Framework
 * [CSS3](https://www.w3schools.com/css/) - Cascading Style Sheets
+* [Bulma](https://bulma.io/) - CSS framework
 
 ## Versioning
 
