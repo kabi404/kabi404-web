@@ -22,6 +22,10 @@ var app = new Vue({
             radio: 'en',
             showSuccessSubmit: false,
             showErrSubmit: false
+        },
+
+        secrets: {
+            fox: 0
         }
     },
 
@@ -119,6 +123,12 @@ var app = new Vue({
                 link = '';
             }
             return link;
+        },
+
+        foxClick: function() {
+            if(++this.$data.secrets.fox == 7) {
+                window.location.href = './secrets/foxes.html';
+            }
         }
         
     },
