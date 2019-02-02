@@ -44,3 +44,7 @@
   .has-bg-img { 
     background: url('./img/japan-tori.jpg')center center; background-size:cover; 
   }
+
+  .visible-text {
+    text-shadow: 2px 2px 4px black;
+  }
