@@ -195,7 +195,7 @@
         "jp": "成功!"
     },
     "ERROR": {
-        "es": "Error :( comprueba que los datos introducidos son correctos.",
+        "es": "Error :(",
         "en": "Error :(",
         "jp": "エラー :("
     },
@@ -205,7 +205,7 @@
         "jp": "提出が成功しました。"
     },
     "ERROR_CONTENT": {
-        "es": "Vaya, parece que se ha producido algún error durante el envio. Por favor inténtelo más tarde.",
+        "es": "Vaya, parece que se ha producido algún error durante el envio. compruebe que los datos introducidos son correctos o inténtelo más tarde.",
         "en": "It seems that there has been some error. Please try again later.",
         "jp": "何らかのエラーがあったようです。 後でもう一度お試しください。"
     }
