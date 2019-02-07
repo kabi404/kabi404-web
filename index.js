@@ -49,7 +49,7 @@ var app = new Vue({
         sendForm: function () {
             var $this = this;
 
-              if(this.$data.data.email == '' || this.$data.data.message == '' || this.$data.data.name == '') {
+              if(this.$data.pageclip.data.email == '' || this.$data.pageclip.data.message == '' || this.$data.pageclip.data.name == '') {
                 $this.$data.toggler.showErrSubmit = true;
               } else {
                 Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
