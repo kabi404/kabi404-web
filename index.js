@@ -45,18 +45,22 @@ var app = new Vue({
         sendForm: function () {
             var $this = this;
 
-              Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
-                if(error) {
-                    $this.$data.toggler.showErrSubmit = true;
-                } else {
-                    $this.$data.toggler.showSuccessSubmit = true;
-                    $this.$data.pageclip.data = {
-                        email: '',
-                        name: '',
-                        message: ''
+              if(this.$data.data.email == '' || this.$data.data.message == '' || this.$data.data.name == '') {
+                $this.$data.toggler.showErrSubmit = true;
+              } else {
+                Pageclip.send(this.$data.pageclip.api, this.$data.pageclip.formNAme, this.$data.pageclip.data, function (error, response) {
+                    if(error) {
+                        $this.$data.toggler.showErrSubmit = true;
+                    } else {
+                        $this.$data.toggler.showSuccessSubmit = true;
+                        $this.$data.pageclip.data = {
+                            email: '',
+                            name: '',
+                            message: ''
+                        }
                     }
-                }
-              })
+                  });
+              }
         },
 
         getLangData: function() {

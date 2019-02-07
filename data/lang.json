@@ -195,7 +195,7 @@
         "jp": "成功!"
     },
     "ERROR": {
-        "es": "Error :(",
+        "es": "Error :( comprueba que los datos introducidos son correctos.",
         "en": "Error :(",
         "jp": "エラー :("
     },

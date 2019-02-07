@@ -514,14 +514,14 @@
                 <div class="field">
                   <label class="label">{{langify('NAME')}}</label>
                   <div class="control">
-                    <input v-model="pageclip.data.name" class="input" type="text" name="name" v-bind:placeholder="langify('NAME')" required>
+                    <input v-model="pageclip.data.name" class="input" type="text" name="name" v-bind:placeholder="langify('NAME')">
                   </div>
                 </div>
 
                 <div class="field">
                   <label class="label">{{langify('EMAIL')}}</label>
                   <div class="control has-icons-left">
-                    <input v-model="pageclip.data.email" class="input" type="email" name="email" placeholder="inari@foxmail.com" value="" required>
+                    <input v-model="pageclip.data.email" class="input" type="email" name="email" placeholder="inari@foxmail.com" value="">
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
@@ -531,7 +531,7 @@
                 <div class="field">
                   <label class="label">{{langify('MESSAGE')}}</label>
                   <div class="control">
-                    <textarea v-model="pageclip.data.message" class="textarea" name="message" v-bind:placeholder="langify('MESSAGE')" required></textarea>
+                    <textarea v-model="pageclip.data.message" class="textarea" name="message" v-bind:placeholder="langify('MESSAGE')"></textarea>
                   </div>
                 </div>
 
