@@ -338,43 +338,52 @@
     </section>
     <!-- End: Services -->
 
-    <!-- Start: CV -->
+    <!-- Start: Experience -->
     <section class="section" id="cv">
       <div class="section-heading">
-        <h3 class="title is-2">{{langify('CURRICULUM_VITAE')}}</h3>
+        <h3 class="title is-2">Mi Experiencia</h3>
         <h4 class="subtitle is-5">{{langify('MORE_ABOUT_ME')}}</h4>
 
-        <div class="columns">
-          <div class="column">
-            <a v-bind:href="cvLink(toggler.radio)" target="_blank" class="button is-dark is-medium">
-              <span class="icon">
-                <i class="fas fa-file-alt"></i>
-              </span>
-              <span>{{langify('DOWNLOAD_MY_CV')}}</span>
-            </a>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <div class="control has-text-centered">
-              <label class="radio">
-                <input type="radio" value="es" v-model="toggler.radio">
-                {{langify('SPANISH')}}
-              </label>
-              <label class="radio">
-                <input type="radio" value="en" v-model="toggler.radio">
-                {{langify('ENGLISH')}}
-              </label>
-              <label class="radio">
-                <input type="radio" value="jp" v-model="toggler.radio">
-                {{langify('JAPANESE')}}
-              </label>
+      <ul class="timeline">
+        <!-- Item 1 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">Lorem ipsum.</span>
+              <span class="time-wrapper"><span class="time">Feb 2015</span></span>
             </div>
+            <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt proident.</div>
           </div>
-        </div>
-      </div>
+        </li>
+      
+        <!-- Item 2 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">Lorem ipsum Anim.</span>
+              <span class="time-wrapper"><span class="time">Dec 2014</span></span>
+            </div>
+            <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
+          </div>
+        </li>
+      
+        <!-- Item 3 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">Universidad de Málaga.</span>
+              <span class="time-wrapper"><span class="time">November 2014</span></span>
+            </div>
+            <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum cupidatat reprehenderit sit id dolor consectetur ut.</div>
+          </div>
+        </li>
+      </ul>
+
     </section>
-    <!-- End: CV -->
+    <!-- End: Experience -->
 
     <!-- Start: Projects -->
     <section class="section" id="projects">
