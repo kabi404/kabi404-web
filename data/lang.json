@@ -208,6 +208,41 @@
         "es": "Vaya, parece que se ha producido algún error durante el envio. compruebe que los datos introducidos son correctos o inténtelo más tarde.",
         "en": "It seems that there has been some error. Please try again later.",
         "jp": "何らかのエラーがあったようです。 後でもう一度お試しください。"
+    },
+    "MY_EXPERIENCE": {
+        "es": "Mi experiencia",
+        "en": "My experience",
+        "jp": ""
+    },
+    "JULY": {
+        "es": "Julio",
+        "en": "July",
+        "jp": ""
+    },
+    "MARCH": {
+        "es": "Marzo",
+        "en": "March",
+        "jp": ""
+    },
+    "NOVEMBER": {
+        "es": "Noviembre",
+        "en": "Noviembre",
+        "jp": ""
+    },
+    "FREELANCE": {
+        "es": "Freelance",
+        "en": "Freelance",
+        "jp": ""
+    },
+    "PRACTICES": {
+        "es": "Prácticas",
+        "en": "Practices",
+        "jp": ""
+    },
+    "UNIVERSITY_OF_MALAGA": {
+        "es": "Universidad de Málaga",
+        "en": "University of Malaga",
+        "jp": ""
     }
 
 }

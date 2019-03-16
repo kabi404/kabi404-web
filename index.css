@@ -1,4 +1,4 @@
-.has-same-height .card {
+  .has-same-height .card {
     height: 320px;
     overflow: hidden;
   }
@@ -48,3 +48,4 @@
   .visible-text {
     text-shadow: 2px 2px 4px black;
   }
+

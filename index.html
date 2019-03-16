@@ -26,6 +26,7 @@
 
   <!-- CSS stylesheets -->
   <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="./css/timeline.css">
 
   <!-- PageClip -->
   <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
@@ -34,77 +35,6 @@
 
 <body>
   <div id="app" >
-    <!-- Start: Navbar -->
-    <nav class="navbar is-black is-fixed-top">
-
-      <div class="navbar-brand">
-        <div class="navbar-burger burger" data-target="section-navbar" 
-            @click="toggleBurger" v-bind:class="{ 'is-active': toggler.burgerToggler }">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="navbar-menu" id="section-navbar" v-bind:class="{ 'is-active': toggler.menuToggler }">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#about">
-            <span class="icon">
-              <i class="fas fa-user"></i>
-            </span>
-            <span>{{langify('ABOUT_ME')}}</span>
-          </a>
-          <a class="navbar-item" href="#services">
-            <span class="icon">
-              <i class="fas fa-coffee"></i>
-            </span>
-            <span>{{langify('SERVICES')}}</span>
-          </a>
-          <a class="navbar-item" href="#cv">
-            <span class="icon">
-              <i class="fas fa-file-alt"></i>
-            </span>
-            <span>{{langify('CV')}}</span>
-          </a>
-          <a class="navbar-item" href="#projects">
-            <span class="icon">
-              <i class="fas fa-grip-horizontal"></i>
-            </span>
-            <span>{{langify('PROJECTS')}}</span>
-          </a>
-          <a class="navbar-item" href="#contact">
-            <span class="icon">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span>{{langify('CONTACT')}}</span>
-          </a>
-          
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-                <span class="icon">
-                  <i class="fas fa-globe"></i>
-                </span>
-                <span>{{langify('LANGUAGE')}}</span>
-            </a>
-    
-            <div class="navbar-dropdown is-right">
-              
-              <a class="navbar-item" @click="changeLang('es')">
-                <span>{{langify('SPANISH')}}&#160;🇪🇸</span>
-              </a>
-              <a class="navbar-item" @click="changeLang('en')">
-                <span>{{langify('ENGLISH')}}&#160;🇬🇧</span>
-              </a>
-              <a class="navbar-item" @click="changeLang('jp')">
-                <span>{{langify('JAPANESE')}}&#160;🇯🇵</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </nav>
-    <!-- End: Navbar -->
 
     <!-- Header -->
     <section class="hero is-link is-fullheight is-fullheight-with-navbar has-bg-img">
@@ -338,43 +268,52 @@
     </section>
     <!-- End: Services -->
 
-    <!-- Start: CV -->
+    <!-- Start: Experience -->
     <section class="section" id="cv">
       <div class="section-heading">
-        <h3 class="title is-2">{{langify('CURRICULUM_VITAE')}}</h3>
+        <h3 class="title is-2">{{langify('MY_EXPERIENCE')}}</h3>
         <h4 class="subtitle is-5">{{langify('MORE_ABOUT_ME')}}</h4>
 
-        <div class="columns">
-          <div class="column">
-            <a v-bind:href="cvLink(toggler.radio)" target="_blank" class="button is-dark is-medium">
-              <span class="icon">
-                <i class="fas fa-file-alt"></i>
-              </span>
-              <span>{{langify('DOWNLOAD_MY_CV')}}</span>
-            </a>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <div class="control has-text-centered">
-              <label class="radio">
-                <input type="radio" value="es" v-model="toggler.radio">
-                {{langify('SPANISH')}}
-              </label>
-              <label class="radio">
-                <input type="radio" value="en" v-model="toggler.radio">
-                {{langify('ENGLISH')}}
-              </label>
-              <label class="radio">
-                <input type="radio" value="jp" v-model="toggler.radio">
-                {{langify('JAPANESE')}}
-              </label>
+      <ul class="timeline">
+        <!-- Item 1 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">{{langify('FREELANCE')}}</span>
+              <span class="time-wrapper"><span class="time">{{langify('JULY')}} 2018</span></span>
             </div>
+            <div class="desc"></div>
           </div>
-        </div>
-      </div>
+        </li>
+      
+        <!-- Item 2 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">{{langify('PRACTICES')}}</span>
+              <span class="time-wrapper"><span class="time">{{langify('MARCH')}} 2018</span></span>
+            </div>
+            <div class="desc"></div>
+          </div>
+        </li>
+      
+        <!-- Item 3 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">{{langify('UNIVERSITY_OF_MALAGA')}}</span>
+              <span class="time-wrapper"><span class="time">{{langify('NOVEMBER')}} 2015</span></span>
+            </div>
+            <div class="desc"></div>
+          </div>
+        </li>
+      </ul>
+
     </section>
-    <!-- End: CV -->
+    <!-- End: Experience -->
 
     <!-- Start: Projects -->
     <section class="section" id="projects">
