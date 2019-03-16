@@ -35,77 +35,6 @@
 
 <body>
   <div id="app" >
-    <!-- Start: Navbar -->
-    <nav class="navbar is-black is-fixed-top">
-
-      <div class="navbar-brand">
-        <div class="navbar-burger burger" data-target="section-navbar" 
-            @click="toggleBurger" v-bind:class="{ 'is-active': toggler.burgerToggler }">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="navbar-menu" id="section-navbar" v-bind:class="{ 'is-active': toggler.menuToggler }">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#about">
-            <span class="icon">
-              <i class="fas fa-user"></i>
-            </span>
-            <span>{{langify('ABOUT_ME')}}</span>
-          </a>
-          <a class="navbar-item" href="#services">
-            <span class="icon">
-              <i class="fas fa-coffee"></i>
-            </span>
-            <span>{{langify('SERVICES')}}</span>
-          </a>
-          <a class="navbar-item" href="#cv">
-            <span class="icon">
-              <i class="fas fa-file-alt"></i>
-            </span>
-            <span>{{langify('CV')}}</span>
-          </a>
-          <a class="navbar-item" href="#projects">
-            <span class="icon">
-              <i class="fas fa-grip-horizontal"></i>
-            </span>
-            <span>{{langify('PROJECTS')}}</span>
-          </a>
-          <a class="navbar-item" href="#contact">
-            <span class="icon">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span>{{langify('CONTACT')}}</span>
-          </a>
-          
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-                <span class="icon">
-                  <i class="fas fa-globe"></i>
-                </span>
-                <span>{{langify('LANGUAGE')}}</span>
-            </a>
-    
-            <div class="navbar-dropdown is-right">
-              
-              <a class="navbar-item" @click="changeLang('es')">
-                <span>{{langify('SPANISH')}}&#160;🇪🇸</span>
-              </a>
-              <a class="navbar-item" @click="changeLang('en')">
-                <span>{{langify('ENGLISH')}}&#160;🇬🇧</span>
-              </a>
-              <a class="navbar-item" @click="changeLang('jp')">
-                <span>{{langify('JAPANESE')}}&#160;🇯🇵</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </nav>
-    <!-- End: Navbar -->
 
     <!-- Header -->
     <section class="hero is-link is-fullheight is-fullheight-with-navbar has-bg-img">
@@ -352,9 +281,9 @@
             <div class="flag-wrapper">
               <span class="hexa"></span>
               <span class="flag">Freelance</span>
-              <span class="time-wrapper"><span class="time">June 2018</span></span>
+              <span class="time-wrapper"><span class="time">July 2018</span></span>
             </div>
-            <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt proident.</div>
+            <div class="desc"></div>
           </div>
         </li>
       
@@ -366,7 +295,7 @@
               <span class="flag">Prácticas</span>
               <span class="time-wrapper"><span class="time">March 2018</span></span>
             </div>
-            <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
+            <div class="desc"></div>
           </div>
         </li>
       
@@ -378,7 +307,7 @@
               <span class="flag">Universidad de Málaga</span>
               <span class="time-wrapper"><span class="time">November 2015</span></span>
             </div>
-            <div class="desc">Comienzo el grado de Ingeniería de Software en la Universidad de Málaga.</div>
+            <div class="desc"></div>
           </div>
         </li>
       </ul>
