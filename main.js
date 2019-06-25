@@ -25,22 +25,22 @@ var app = new Vue({
           HOME: {
             es: 'Inicio',
             en: 'Home',
-            jp: ''
+            jp: 'ホーム'
           },
           SKILLS: {
             es: 'Habilidades',
             en: 'Skills',
-            jp: ''
+            jp: '熟練'
           },
           PROJECTS: {
             es: 'Projects',
             en: 'Web hosted on Github',
-            jp: ''
+            jp: 'プロジェクト'
           },
           LANGUAGE: {
             es: 'Language',
             en: 'Web hosted on Github',
-            jp: ''
+            jp: '言語'
           }
       }
     },
