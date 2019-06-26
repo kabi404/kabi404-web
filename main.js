@@ -71,6 +71,26 @@ var app = new Vue({
                     score: 80
                   }
                 ]
+              },{
+                title: 'Sectores',
+                skills: [
+                  {
+                    name: 'Ingeniería de Software',
+                    score: 80
+                  },
+                  {
+                    name: 'Desarrollo Back-end',
+                    score: 90
+                  },
+                  {
+                    name: 'Desarrollo Front-end',
+                    score: 80
+                  },
+                  {
+                    name: 'Aplicaciones móviles',
+                    score: 50
+                  }
+                ]
               },
               {
                 title: 'Idiomas',
@@ -117,6 +137,26 @@ var app = new Vue({
                   {
                     name: 'SQL',
                     score: 80
+                  }
+                ]
+              },{
+                title: 'Sectores',
+                skills: [
+                  {
+                    name: 'Ingeniería de Software',
+                    score: 80
+                  },
+                  {
+                    name: 'Desarrollo Back-end',
+                    score: 90
+                  },
+                  {
+                    name: 'Desarrollo Front-end',
+                    score: 80
+                  },
+                  {
+                    name: 'Aplicaciones móviles',
+                    score: 50
                   }
                 ]
               },
@@ -167,6 +207,26 @@ var app = new Vue({
                     score: 80
                   }
                 ]
+              },{
+                title: 'Sectores',
+                skills: [
+                  {
+                    name: 'Ingeniería de Software',
+                    score: 80
+                  },
+                  {
+                    name: 'Desarrollo Back-end',
+                    score: 90
+                  },
+                  {
+                    name: 'Desarrollo Front-end',
+                    score: 80
+                  },
+                  {
+                    name: 'Aplicaciones móviles',
+                    score: 50
+                  }
+                ]
               },
               {
                 title: 'Idiomas',
@@ -188,6 +248,41 @@ var app = new Vue({
                     score: 50
                   }
                 ]
+              }
+            ]
+          },
+          PROJECTS_CARDS: {
+            es: [
+              {
+                title: 'Mikana',
+                subtitle: 'Javier Parada',
+                description: 'Esto es la descripcion',
+                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: '',
+                repoLink: ''
+              }
+            ],
+            en: [
+              {
+                title: 'Mikana',
+                subtitle: 'Javier Parada',
+                description: 'Esto es la descripcion',
+                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: '',
+                repoLink: ''
+              }
+            ],
+            jp: [
+              {
+                title: 'Mikana',
+                subtitle: 'Javier Parada',
+                description: 'Esto es la descripcion',
+                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: '',
+                repoLink: ''
               }
             ]
           }

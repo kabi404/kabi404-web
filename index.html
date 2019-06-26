@@ -142,21 +142,70 @@
                 <!-- end Skills -->
 
 
+                <!-- Projects -->
+                <div v-if="tab == 'projects'" class="container has-text-centered">
 
-
-            </div>
-
-            <div class="hero-foot">
-                <div class="container">
-                    <div class="tabs is-centered">
-                        <ul>
-                            <li><a target="_blank"
-                                    href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
-                                    &nbsp;<i class="fab fa-github-alt"></i></a></li>
-                        </ul>
+                    <div class="columns">
+                        <div class="column is-one-third" v-for="project in lang('PROJECTS_CARDS')">
+                            <div class="card large">
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img v-bind:src="project.projectImg"
+                                            alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-96x96">
+                                                <img v-bind:src="project.orgImg" alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4 no-padding">{{project.title}}</p>
+                                            <p class="subtitle is-6">{{project.subtitle}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="content has-text-justified">
+                                        {{project.description}}
+                                        <div class="background-icon"><span class="icon-twitter"></span></div>
+                                    </div>
+                                </div>
+                                <footer class="card-footer">
+                                  <p class="card-footer-item">
+                                    <span>
+                                        <a target="_blank" v-bind:href="downloadLink">
+                                            Download
+                                        </a>
+                                    </span>
+                                  </p>
+                                  <p class="card-footer-item">
+                                    <span>
+                                      <a target="_blank" v-bind:href="repoLink">
+                                        Source Code
+                                      </a>
+                                    </span>
+                                  </p>
+                                </footer>
+                            </div>
+                        </div>
                     </div>
+                    <!-- end Projects -->
+
                 </div>
             </div>
+
+                <div class="hero-foot">
+                    <div class="container">
+                        <div class="tabs is-centered">
+                            <ul>
+                                <li><a target="_blank"
+                                        href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
+                                        &nbsp;<i class="fab fa-github-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
 
