@@ -335,6 +335,11 @@ var app = new Vue({
 
         setTab: function(currentTab) {
           this.tab = currentTab
+          if(currentTab == 'home') {
+            this.typeName()
+            alert(currentTab)
+          }
+            
         },
 
         setLan: function(lan) {
@@ -353,12 +358,12 @@ var app = new Vue({
               el.addEventListener('click', () => {
               
                 const target = el.dataset.target;
-                const $target = document.getElementById(target);
+                const $target = document.getElementById(target)
     
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-              });
-            });
+                el.classList.toggle('is-active')
+                $target.classList.toggle('is-active')
+              })
+            })
           }
         }
     },
@@ -376,6 +381,7 @@ var app = new Vue({
 
     mounted: function() {
       this.burgerToggleEventAdd()
+      new TypeIt('#typeit').go();
     }
 
   })
