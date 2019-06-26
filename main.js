@@ -9,6 +9,8 @@ var app = new Vue({
 
       tab: 'home',
 
+      showLanModal: false,
+
       content: {
           JAVIER_PARADA: {
             es: 'Javier Parada',
@@ -36,13 +38,18 @@ var app = new Vue({
             jp: '熟練'
           },
           PROJECTS: {
-            es: 'Projects',
-            en: 'Web hosted on Github',
+            es: 'Proyectos',
+            en: 'Projects',
             jp: 'プロジェクト'
           },
           LANGUAGE: {
-            es: 'Language',
-            en: 'Web hosted on Github',
+            es: 'Idioma',
+            en: 'Language',
+            jp: '言語'
+          },
+          CLOSE: {
+            es: 'Cerrar',
+            en: 'Close',
             jp: '言語'
           },
           SKILLS_CARDS: {
@@ -296,6 +303,14 @@ var app = new Vue({
 
         setTab: function(currentTab) {
           this.tab = currentTab
+        },
+
+        setLan: function(lan) {
+          this.currentLan = lan
+        },
+
+        toggleLanguageModal: function() {
+          this.showLanModal = !(this.showLanModal)
         },
 
         burgerToggleEventAdd: function() {
