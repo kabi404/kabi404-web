@@ -1,11 +1,4 @@
 
-const TABS = {
-  HOME: 'home',
-  SKILLS: 'skills',
-  PROJECTS: 'projects',
-  LANGUAGE: 'lan'
-}
-
 var app = new Vue({
     el: '#app',
 
@@ -51,6 +44,152 @@ var app = new Vue({
             es: 'Language',
             en: 'Web hosted on Github',
             jp: '言語'
+          },
+          SKILLS_CARDS: {
+            es: [
+              {
+                title: 'Tecnologías',
+                skills: [
+                  {
+                    name: 'Node.js',
+                    score: 90
+                  },
+                  {
+                    name: 'JAVA',
+                    score: 100
+                  },
+                  {
+                    name: 'Vue.js',
+                    score: 90
+                  },
+                  {
+                    name: 'NoSQL',
+                    score: 80
+                  },
+                  {
+                    name: 'SQL',
+                    score: 80
+                  }
+                ]
+              },
+              {
+                title: 'Idiomas',
+                skills: [
+                  {
+                    name: 'Español',
+                    score: 100
+                  },
+                  {
+                    name: 'Euskera',
+                    score: 90
+                  },
+                  {
+                    name: 'Inglés',
+                    score: 80
+                  },
+                  {
+                    name: 'Japonés',
+                    score: 50
+                  }
+                ]
+              }
+            ],
+            en: [
+              {
+                title: 'Technologies',
+                skills: [
+                  {
+                    name: 'Node.js',
+                    score: 90
+                  },
+                  {
+                    name: 'JAVA',
+                    score: 100
+                  },
+                  {
+                    name: 'Vue.js',
+                    score: 90
+                  },
+                  {
+                    name: 'NoSQL',
+                    score: 80
+                  },
+                  {
+                    name: 'SQL',
+                    score: 80
+                  }
+                ]
+              },
+              {
+                title: 'Languages',
+                skills: [
+                  {
+                    name: 'Spanish',
+                    score: 100
+                  },
+                  {
+                    name: 'Basque',
+                    score: 90
+                  },
+                  {
+                    name: 'English',
+                    score: 80
+                  },
+                  {
+                    name: 'Japanese',
+                    score: 50
+                  }
+                ]
+              }
+            ],
+            jp: [
+              {
+                title: 'Tecnologías',
+                skills: [
+                  {
+                    name: 'Node.js',
+                    score: 90
+                  },
+                  {
+                    name: 'JAVA',
+                    score: 100
+                  },
+                  {
+                    name: 'Vue.js',
+                    score: 90
+                  },
+                  {
+                    name: 'NoSQL',
+                    score: 80
+                  },
+                  {
+                    name: 'SQL',
+                    score: 80
+                  }
+                ]
+              },
+              {
+                title: 'Idiomas',
+                skills: [
+                  {
+                    name: 'Español',
+                    score: 100
+                  },
+                  {
+                    name: 'Euskera',
+                    score: 90
+                  },
+                  {
+                    name: 'Inglés',
+                    score: 80
+                  },
+                  {
+                    name: 'Japonés',
+                    score: 50
+                  }
+                ]
+              }
+            ]
           }
       }
     },

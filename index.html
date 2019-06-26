@@ -113,50 +113,36 @@
 
                 <!-- Skills -->
                 <div v-if="tab == 'skills'" class="container has-text-centered">
-                        <div class="columns is-vcentered is-centered">
-                            <div class="column is-3">
-                                <figure class="image is-1by1">
-                                    <img src="https://avatars3.githubusercontent.com/u/19194763?s=460&v=4"
-                                        class="is-rounded" alt="Description">
-                                </figure>
-                            </div>
-                            <div class="column is-6 is-offset-1">
-                                <h1 class="title is-2">
-                                    {{ lang('JAVIER_PARADA') }}
-                                </h1>
-                                <h2 class="subtitle is-4">
-                                    {{ lang('SOFTWARE_ENGINEER') }}
-                                </h2>
-                                <br>
-                                <div class="columns is-centered is-multiline has-text-centered">
-                                    <div class="column is-2">
-                                        <a target="_blank" href="https://github.com/kabi404"
-                                            class="is-size-3 has-text-grey-dark">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                    </div>
-                                    <div class="column is-2">
-                                        <a target="_blank" href="https://www.linkedin.com/in/kabi404/"
-                                            class="is-size-3 has-text-grey-dark">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </div>
-                                    <div class="column is-2">
-                                        <a target="_blank" href="https://twitter.com/kabi404"
-                                            class="is-size-3 has-text-grey-dark">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </div>
-                                    <div class="column is-2">
-                                        <a href="mailto:kabi404@outlook.com" class="is-size-3 has-text-grey-dark">
-                                            <i class="fas fa-envelope"></i>
-                                        </a>
+
+                    <div class="columns">
+                        <div class="column is-4" v-for="card in lang('SKILLS_CARDS')">
+                            <div class="card">
+                                <div class="card-content skills-content">
+                                    <h3 class="title is-4">{{card.title}}</h3>
+                                    <div class="content">
+
+                                        <article v-for="skill in card.skills" class="media">
+                                            <div class="media-content">
+                                                <div class="content has-text-centered">
+                                                    <p>
+                                                        <strong>{{skill.name}}</strong>
+                                                        <br>
+                                                        <progress class="progress is-info" v-bind:value="skill.score"
+                                                            max="100"></progress>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end Home -->
+                </div>
+                <!-- end Skills -->
+
+
+
 
             </div>
 
@@ -164,8 +150,9 @@
                 <div class="container">
                     <div class="tabs is-centered">
                         <ul>
-                            <li><a target="_blank" href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
-                                &nbsp;<i class="fab fa-github-alt"></i></a></li>
+                            <li><a target="_blank"
+                                    href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
+                                    &nbsp;<i class="fab fa-github-alt"></i></a></li>
                         </ul>
                     </div>
                 </div>
