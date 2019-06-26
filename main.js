@@ -1,3 +1,11 @@
+
+const TABS = {
+  HOME: 'home',
+  SKILLS: 'skills',
+  PROJECTS: 'projects',
+  LANGUAGE: 'lan'
+}
+
 var app = new Vue({
     el: '#app',
 
@@ -5,6 +13,8 @@ var app = new Vue({
       test: 'Test Vue!',
 
       currentLan: 'en',
+
+      tab: 'home',
 
       content: {
           JAVIER_PARADA: {
@@ -48,6 +58,10 @@ var app = new Vue({
     methods: {
         lang: function(strId) {
             return this.content[strId][this.currentLan]
+        },
+
+        setTab: function(currentTab) {
+          this.tab = currentTab
         },
 
         burgerToggleEventAdd: function() {
