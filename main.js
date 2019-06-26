@@ -284,6 +284,14 @@ var app = new Vue({
                 orgImg: 'https://avatars2.githubusercontent.com/u/35332682?s=200&v=4',
                 downloadLink: 'https://www.kabi404.dev/Kanami/',
                 repoLink: 'https://github.com/kabi404/Kanami'
+              },{
+                title: 'Joseto',
+                subtitle: 'Javier Parada',
+                description: 'Bot de Discord modular al que introducirle facilmente comandos y diversas funcionalidades.',
+                projectImg: './img/joseto.png',
+                orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: 'https://www.kabi404.dev/Joseto/',
+                repoLink: 'https://github.com/kabi404/Joseto'
               }
             ],
             en: [
