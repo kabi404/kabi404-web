@@ -261,11 +261,27 @@ var app = new Vue({
           PROJECTS_CARDS: {
             es: [
               {
+                title: 'Kanjinary',
+                subtitle: 'Javier Parada',
+                description: 'Aplicación web y base de datos para estudiar kanjis japoneses en el orden de estudio japonés. Datos obtenidos de apuntes de la Escuela Oficial de Idiomas de Málaga.',
+                projectImg: './img/kanjinary.png',
+                orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: 'https://www.kabi404.dev/kanjinary/',
+                repoLink: 'https://github.com/kabi404/kanjinary'
+              },{
                 title: 'Kanami',
                 subtitle: 'Javier Parada',
-                description: 'Esto es la descripcion',
+                description: 'Aplicación web y de escritorio minimalista para aprender los silabarios japoneses Hiragana y Katakana. Una sola compilación para generar ambas aplicaciones.',
                 projectImg: './img/kanami.png',
                 orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
+                downloadLink: 'https://www.kabi404.dev/Kanami/',
+                repoLink: 'https://github.com/kabi404/Kanami'
+              },{
+                title: 'Mikana',
+                subtitle: 'ArtichokeCore',
+                description: 'Aplicación móvil nativa Android para aprender los silabarios japoneses Hiragana y Katakana.',
+                projectImg: './img/mikana.png',
+                orgImg: 'https://avatars2.githubusercontent.com/u/35332682?s=200&v=4',
                 downloadLink: 'https://www.kabi404.dev/Kanami/',
                 repoLink: 'https://github.com/kabi404/Kanami'
               }
