@@ -261,35 +261,35 @@ var app = new Vue({
           PROJECTS_CARDS: {
             es: [
               {
-                title: 'Mikana',
+                title: 'Kanami',
                 subtitle: 'Javier Parada',
                 description: 'Esto es la descripcion',
-                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                projectImg: './img/kanami.png',
                 orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
-                downloadLink: '',
-                repoLink: ''
+                downloadLink: 'https://www.kabi404.dev/Kanami/',
+                repoLink: 'https://github.com/kabi404/Kanami'
               }
             ],
             en: [
               {
-                title: 'Mikana',
+                title: 'Kanami',
                 subtitle: 'Javier Parada',
                 description: 'Esto es la descripcion',
-                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                projectImg: './img/kanami.png',
                 orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
-                downloadLink: '',
-                repoLink: ''
+                downloadLink: 'https://www.kabi404.dev/Kanami/',
+                repoLink: 'https://github.com/kabi404/Kanami'
               }
             ],
             jp: [
               {
-                title: 'Mikana',
+                title: 'Kanami',
                 subtitle: 'Javier Parada',
                 description: 'Esto es la descripcion',
-                projectImg: 'https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=',
+                projectImg: './img/kanami.png',
                 orgImg: 'https://avatars3.githubusercontent.com/u/19194763?s=460&v=4',
-                downloadLink: '',
-                repoLink: ''
+                downloadLink: 'https://www.kabi404.dev/Kanami/',
+                repoLink: 'https://github.com/kabi404/Kanami'
               }
             ]
           }
