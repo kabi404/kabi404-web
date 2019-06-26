@@ -269,6 +269,14 @@ var app = new Vue({
                 downloadLink: 'https://www.kabi404.dev/kanjinary/',
                 repoLink: 'https://github.com/kabi404/kanjinary'
               },{
+                title: 'PPCE',
+                subtitle: 'Javier Parada',
+                description: 'Plataforma de Prevención y Control de Emergencias. Trabajo de final de grado en la Universidad de Málaga en el grado de Ingeniería del Software.',
+                projectImg: './img/ppce.png',
+                orgImg: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Universidad_de_Málaga.jpg',
+                downloadLink: 'http://www.kabi404.dev/PPCE/',
+                repoLink: 'https://github.com/kabi404/PPCE'
+              },{
                 title: 'Kanami',
                 subtitle: 'Javier Parada',
                 description: 'Aplicación web y de escritorio minimalista para aprender los silabarios japoneses Hiragana y Katakana. Una sola compilación para generar ambas aplicaciones.',
@@ -282,7 +290,7 @@ var app = new Vue({
                 description: 'Aplicación móvil nativa Android para aprender los silabarios japoneses Hiragana y Katakana.',
                 projectImg: './img/mikana.png',
                 orgImg: 'https://avatars2.githubusercontent.com/u/35332682?s=200&v=4',
-                downloadLink: 'https://www.kabi404.dev/Kanami/',
+                downloadLink: 'https://play.google.com/store/apps/details?id=com.artichokecore.mikana&hl=es',
                 repoLink: 'https://github.com/kabi404/Kanami'
               },{
                 title: 'Joseto',
