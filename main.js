@@ -335,11 +335,6 @@ var app = new Vue({
 
         setTab: function(currentTab) {
           this.tab = currentTab
-          if(currentTab == 'home') {
-            this.typeName()
-            alert(currentTab)
-          }
-            
         },
 
         setLan: function(lan) {
@@ -381,7 +376,10 @@ var app = new Vue({
 
     mounted: function() {
       this.burgerToggleEventAdd()
-      new TypeIt('#typeit').go();
+      new TypeIt('#typeit', {
+        startDelay: 300,
+        speed: 150
+      }).go()
     }
 
   })
