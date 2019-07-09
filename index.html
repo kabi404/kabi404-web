@@ -71,58 +71,9 @@
 
                 <Skills v-if="tab == 'skills'" v-bind:current-lan='currentLan'></Skills>
                 <Home v-if="tab == 'home'" v-bind:current-lan='currentLan'></Home>
+                <Projects v-if="tab == 'projects'" v-bind:current-lan='currentLan'></Projects>
 
 
-                <!-- Projects -->
-                <div v-if="tab == 'projects'" class="container has-text-centered">
-
-                    <div class="columns is-multiline">
-                        <div class="column is-one-third" v-for="project in lang('PROJECTS_CARDS')">
-                            <div class="card large">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img v-bind:src="project.projectImg"
-                                            alt="Image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <figure class="image is-96x96">
-                                                <img v-bind:src="project.orgImg" alt="Image">
-                                            </figure>
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4 no-padding">{{project.title}}</p>
-                                            <p class="subtitle is-6">{{project.subtitle}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="content has-text-justified">
-                                        {{project.description}}
-                                        <div class="background-icon"><span class="icon-twitter"></span></div>
-                                    </div>
-                                </div>
-                                <footer class="card-footer">
-                                  <p class="card-footer-item">
-                                    <span>
-                                        <a target="_blank" v-bind:href="project.downloadLink">
-                                            Web
-                                        </a>
-                                    </span>
-                                  </p>
-                                  <p class="card-footer-item">
-                                    <span>
-                                      <a target="_blank" v-bind:href="project.repoLink">
-                                        Source Code
-                                      </a>
-                                    </span>
-                                  </p>
-                                </footer>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end Projects -->
 
                 <!-- Languages -->
                 <div class="modal" v-bind:class="{'is-active': showLanModal}">
@@ -189,6 +140,7 @@
         </section>
     </div>
     
+    <script src="./js/projects.js"></script>
     <script src="./js/skills.js"></script>
     <script src="./js/home.js"></script>
     
