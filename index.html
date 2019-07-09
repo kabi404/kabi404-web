@@ -13,10 +13,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
     <!-- Vue dev -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <!-- Vue production -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!---<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
 
     <!-- Typeit -->
     <script src="https://cdn.jsdelivr.net/npm/typeit@6/dist/typeit.min.js"></script>
@@ -67,52 +67,7 @@
             </div>
             <div class="hero-body">
 
-                <!-- Home -->
-                <div v-if="tab == 'home'" class="container has-text-centered">
-                    <div class="columns is-vcentered is-centered">
-                        <div class="column is-3">
-                            <figure class="image is-1by1">
-                                <img src="https://avatars3.githubusercontent.com/u/19194763?s=460&v=4"
-                                    class="is-rounded" alt="Description">
-                            </figure>
-                        </div>
-                        <div class="column is-6 is-offset-1">
-                            <h1 id="typeit" class="title is-2">
-                                {{ lang('JAVIER_PARADA') }}
-                            </h1>
-                            <h2 class="subtitle is-4">
-                                {{ lang('SOFTWARE_ENGINEER') }}
-                            </h2>
-                            <br>
-                            <div class="columns is-centered is-multiline has-text-centered">
-                                <div class="column is-2">
-                                    <a target="_blank" href="https://github.com/kabi404"
-                                        class="is-size-3 has-text-grey-dark">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                                <div class="column is-2">
-                                    <a target="_blank" href="https://www.linkedin.com/in/kabi404/"
-                                        class="is-size-3 has-text-grey-dark">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </div>
-                                <div class="column is-2">
-                                    <a target="_blank" href="https://twitter.com/kabi404"
-                                        class="is-size-3 has-text-grey-dark">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </div>
-                                <div class="column is-2">
-                                    <a href="mailto:kabi404@outlook.com" class="is-size-3 has-text-grey-dark">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end Home -->
+                <Home v-bind:tab='tab' v-bind:current-lan='currentLan'/>
 
                 <!-- Skills -->
                 <div v-if="tab == 'skills'" class="container has-text-centered">
@@ -260,8 +215,9 @@
                 </div>
         </section>
     </div>
-
-    <script src="./main.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/app.js"></script>
+    
 
 </body>
 
