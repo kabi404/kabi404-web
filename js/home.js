@@ -1,11 +1,9 @@
-var home = Vue.component('Home', {
+const home = Vue.component('Home', {
     props: {
-        tab: String,
         currentLan: String
     },
     data: function () {
       return {
-        currentLan: 'es',
         content: {
             JAVIER_PARADA: {
                 es: 'Javier Parada',
@@ -25,9 +23,15 @@ var home = Vue.component('Home', {
             return this.content[strId][this.currentLan]
         }
     },
+    mounted: function(){
+        new TypeIt('#typeit', {
+            startDelay: 300,
+            speed: 150
+          }).go()
+    },
     template: 
         `
-        <div v-if="tab == 'home'" class="container has-text-centered">
+        <div class="container has-text-centered">
             <div class="columns is-vcentered is-centered">
                 <div class="column is-3">
                     <figure class="image is-1by1">
