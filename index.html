@@ -1,1 +1,153 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>kabi404.github.io</title><link href=/js/about.85a1a357.js rel=prefetch><link href=/css/app.c6167d4a.css rel=preload as=style><link href=/js/app.56a0bf75.js rel=preload as=script><link href=/js/chunk-vendors.c6093fef.js rel=preload as=script><link href=/css/app.c6167d4a.css rel=stylesheet></head><body><noscript><strong>We're sorry but kabi404.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.c6093fef.js></script><script src=/js/app.56a0bf75.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" type="image/png" href="./assets/img/developer.png" />
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+
+    <!-- Font-awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <!-- Vue dev -->
+    <!---<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+
+    <!-- Vue production -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- Typeit -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6/dist/typeit.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css">
+
+    <title>Javier Parada</title>
+</head>
+
+<body>
+    <div id="app">
+        <section class="hero is-fullheight is-default is-bold">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item is-size-2">
+                                <i class="fab fa-firefox"></i>
+                            </a>
+                            <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <div class="tabs is-right">
+                                    <ul>
+                                        <li v-bind:class="{'is-active': tab == 'home'}" @click="setTab('home')">
+                                            <a>{{ lang('HOME') }}</a>
+                                        </li>
+                                        <li v-bind:class="{'is-active': tab == 'skills'}" @click="setTab('skills')">
+                                            <a>{{ lang('SKILLS') }}</a>
+                                        </li>
+                                        <li v-bind:class="{'is-active': tab == 'projects'}" @click="setTab('projects')">
+                                            <a>{{ lang('PROJECTS') }}</a>
+                                        </li>
+                                        <li @click="toggleLanguageModal()">
+                                            <a>{{ lang('LANGUAGE') }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="hero-body">
+
+                
+
+                <Skills v-if="tab == 'skills'" v-bind:current-lan='currentLan'></Skills>
+                <Home v-if="tab == 'home'" v-bind:current-lan='currentLan'></Home>
+                <Projects v-if="tab == 'projects'" v-bind:current-lan='currentLan'></Projects>
+
+
+
+                <!-- Languages -->
+                <div class="modal" v-bind:class="{'is-active': showLanModal}">
+                  <div class="modal-background"></div>
+                  <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title">{{lang('LANGUAGE')}}</p>
+                      <button @click="toggleLanguageModal()" class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body has-text-centered">
+                        <div class="control">
+                            <div class="columns">
+                                <div class="column">
+                                    <a @click="setLan('es')">
+                                        <div v-bind:class="{'has-background-grey-dark has-text-white': currentLan == 'es'}" class="box has-text-centered">
+                                            <p>Español</p>
+                                            <p>Spanish</p>
+                                            <p>スペイン語</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a @click="setLan('en')">
+                                        <div v-bind:class="{'has-background-grey-dark has-text-white': currentLan == 'en'}" class="box has-text-centered">
+                                            <p>Inglés</p>
+                                            <p>English</p>
+                                            <p>英語</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a @click="setLan('jp')">
+                                        <div v-bind:class="{'has-background-grey-dark has-text-white': currentLan == 'jp'}" class="box has-text-centered">
+                                            <p>Japonés</p>
+                                            <p>Japanese</p>
+                                            <p>日本語</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <button @click="toggleLanguageModal()" class="button">{{lang('CLOSE')}}</button>
+                    </footer>
+                  </div>
+                </div>
+                <!-- end Language -->
+
+                
+            </div>
+
+                <div class="hero-foot">
+                    <div class="container">
+                        <div class="tabs is-centered">
+                            <ul>
+                                <li><a target="_blank"
+                                        href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
+                                        &nbsp;<i class="fab fa-github-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    
+    <script src="./js/projects.js"></script>
+    <script src="./js/skills.js"></script>
+    <script src="./js/home.js"></script>
+    
+    <script src="./js/app.js"></script>
+    
+</body>
+
+</html>
