@@ -5,7 +5,7 @@
               <ul>
                   <li><a target="_blank"
                           href="https://github.com/kabi404/kabi404.github.io">{{ lang('PAGE_HOSTED_ON_GITHUB') }}
-                          &nbsp;<i class="fab fa-github-alt"></i></a></li>
+                          &nbsp;<font-awesome-icon :icon="['fab', 'github-alt']"/></a></li>
               </ul>
           </div>
       </div>

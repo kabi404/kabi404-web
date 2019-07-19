@@ -19,24 +19,24 @@
                   <div class="column is-2">
                       <a target="_blank" href="https://github.com/kabi404"
                           class="is-size-3 has-text-grey-dark">
-                          <i class="fab fa-github"></i>
+                          <font-awesome-icon :icon="['fab', 'github']"/>
                       </a>
                   </div>
                   <div class="column is-2">
                       <a target="_blank" href="https://www.linkedin.com/in/kabi404/"
                           class="is-size-3 has-text-grey-dark">
-                          <i class="fab fa-linkedin-in"></i>
+                          <font-awesome-icon :icon="['fab', 'linkedin-in']"/>
                       </a>
                   </div>
                   <div class="column is-2">
                       <a target="_blank" href="https://twitter.com/kabi404"
                           class="is-size-3 has-text-grey-dark">
-                          <i class="fab fa-twitter"></i>
+                          <font-awesome-icon :icon="['fab', 'twitter']"/>
                       </a>
                   </div>
                   <div class="column is-2">
                       <a href="mailto:kabi404@outlook.com" class="is-size-3 has-text-grey-dark">
-                          <i class="fas fa-envelope"></i>
+                          <font-awesome-icon :icon="['fa', 'envelope']"/>
                       </a>
                   </div>
               </div>
