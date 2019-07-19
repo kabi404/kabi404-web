@@ -3,7 +3,8 @@ export default {
     app: require('@/assets/lan/app-lan.json'),
     footer: require('@/assets/lan/footer-lan.json'),
     home: require('@/assets/lan/home-lan.json'),
-    navbar: require('@/assets/lan/navbar-lan.json')
+    navbar: require('@/assets/lan/navbar-lan.json'),
+    projects: require('@/assets/lan/projects-lan.json')
   },
 
   getters: {
