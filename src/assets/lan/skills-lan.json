@@ -1,0 +1,27 @@
+{
+    "FRONT_END": {
+      "es": "Front-end",
+      "en": "Front-end",
+      "jp": ""
+    },
+    "BACK_END": {
+      "es": "Back-end",
+      "en": "Back-end",
+      "jp": ""
+    },
+    "DATABASES": {
+      "es": "Bases de datos",
+      "en": "Databases",
+      "jp": ""
+    },
+    "MOBILE": {
+      "es": "Móvil",
+      "en": "Mobile",
+      "jp": ""
+    },
+    "LANGUAGES": {
+      "es": "Idiomas",
+      "en": "Languages",
+      "jp": "言語"
+    }
+}

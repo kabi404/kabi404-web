@@ -4,7 +4,8 @@ export default {
     footer: require('@/assets/lan/footer-lan.json'),
     home: require('@/assets/lan/home-lan.json'),
     navbar: require('@/assets/lan/navbar-lan.json'),
-    projects: require('@/assets/lan/projects-lan.json')
+    projects: require('@/assets/lan/projects-lan.json'),
+    skills: require('@/assets/lan/skills-lan.json')
   },
 
   getters: {

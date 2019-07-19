@@ -5,31 +5,31 @@
         <li v-bind:class="{'is-active': selectedTab == 'front-end'}">
           <a @click="setTab('front-end')">
             <span class="icon is-small"><font-awesome-icon :icon="['fa', 'file-code']"/></span>
-            <span>Front-end</span>
+            <span>{{lang('FRONT_END')}}</span>
           </a>
         </li>
         <li v-bind:class="{'is-active': selectedTab == 'back-end'}">
           <a @click="setTab('back-end')">
             <span class="icon is-small"><font-awesome-icon :icon="['fa', 'server']"/></span>
-            <span>Back-end</span>
+            <span>{{lang('BACK_END')}}</span>
           </a>
         </li>
         <li v-bind:class="{'is-active': selectedTab == 'databases'}">
           <a @click="setTab('databases')">
             <span class="icon is-small"><font-awesome-icon :icon="['fa', 'database']"/></span>
-            <span>Databases</span>
+            <span>{{lang('DATABASES')}}</span>
           </a>
         </li>
         <li v-bind:class="{'is-active': selectedTab == 'mobile'}">
           <a @click="setTab('mobile')">
             <span class="icon is-small"><font-awesome-icon :icon="['fa', 'mobile']"/></span>
-            <span>Mobile</span>
+            <span>{{lang('MOBILE')}}</span>
           </a>
         </li>
         <li v-bind:class="{'is-active': selectedTab == 'languages'}">
           <a @click="setTab('languages')">
             <span class="icon is-small"><font-awesome-icon :icon="['fa', 'globe']"/></span>
-            <span>Languages</span>
+            <span>{{lang('LANGUAGES')}}</span>
           </a>
         </li>
       </ul>
@@ -50,6 +50,9 @@
 import VueApexCharts from 'vue-apexcharts'
 
 export default {
+
+  name: 'skills',
+
   components: {
     apexchart: VueApexCharts
   },
@@ -58,6 +61,10 @@ export default {
     chart: function() {
       let chart = this.selectedTab
       return require(`@/assets/skills/${chart}.js`)
+    },
+
+    currentLan: function() {
+      return this.$store.state.lan
     }
   },
 
@@ -70,6 +77,14 @@ export default {
   methods: {
     setTab: function(tab) {
       this.selectedTab = tab
+    },
+
+    lang: function(strId) {
+      return this.$store.getters.getLanById({
+        name:this.$options.name,
+        id:strId,
+        lan:this.currentLan
+      })
     }
   }
 }
