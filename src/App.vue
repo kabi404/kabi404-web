@@ -52,5 +52,8 @@ export default {
 
 <style lang="sass">
   @import '/../node_modules/bulma/bulma.sass'
+  img
+    -webkit-filter: grayscale(30%)
+    filter: grayscale(30%)
 </style>
 
