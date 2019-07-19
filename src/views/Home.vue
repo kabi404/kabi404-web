@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import TypeIt from 'typeit'
+
 export default {
   name: 'home',
 
@@ -67,6 +69,13 @@ export default {
     currentLan: function() {
       return this.$store.state.lan
     }
+  },
+
+  mounted: function(){
+    new TypeIt('#typeit', {
+        startDelay: 300,
+        speed: 150
+      }).go()
   }
 }
 </script>
