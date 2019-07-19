@@ -20,8 +20,8 @@ export default new Router({
       component: Skills
     },
     {
-      path: 'projects',
-      name: 'prjects',
+      path: '/projects',
+      name: 'projects',
       component: Projects
     }
   ]

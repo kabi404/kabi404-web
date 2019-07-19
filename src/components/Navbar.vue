@@ -15,17 +15,17 @@
               <div class="navbar-end">
                   <div class="tabs is-right">
                       <ul>
-                          <li v-bind:class="{'is-active': currentTab == 'home'}" @click="setTab('home')">
-                              <a>{{ lang('HOME') }}</a>
+                          <li v-bind:class="{'is-active': currentTab == 'home'}">
+                              <router-link to="/">{{ lang('HOME') }}</router-link>
                           </li>
-                          <li v-bind:class="{'is-active': currentTab == 'skills'}" @click="setTab('skills')">
-                              <a>{{ lang('SKILLS') }}</a>
+                          <li v-bind:class="{'is-active': currentTab == 'skills'}">
+                              <router-link to="/skills">{{ lang('SKILLS') }}</router-link>
                           </li>
-                          <li v-bind:class="{'is-active': currentTab == 'projects'}" @click="setTab('projects')">
-                              <a>{{ lang('PROJECTS') }}</a>
+                          <li v-bind:class="{'is-active': currentTab == 'projects'}">
+                              <router-link to="/projects">{{ lang('PROJECTS') }}</router-link>
                           </li>
                           <li @click="toggleLanguageModal()">
-                              <a>{{ lang('LANGUAGE') }}</a>
+                              <router-link to="">{{ lang('LANGUAGE') }}</router-link>
                           </li>
                       </ul>
                   </div>
