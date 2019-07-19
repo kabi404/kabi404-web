@@ -50,8 +50,12 @@ export default {
   name: 'home',
 
   methods: {
-    lang: function (strId) {
-      return 'miau'
+    lang: function(strId) {
+      return this.$store.getters.getLanById({
+        name:this.$options.name,
+        id:strId,
+        lan:this.currentLan
+      })
     }
   },
 

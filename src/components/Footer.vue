@@ -18,7 +18,21 @@ export default {
 
   methods: {
     lang: function(strId) {
-      return 'miau'
+      return this.$store.getters.getLanById({
+        name:this.$options.name,
+        id:strId,
+        lan:this.currentLan
+      })
+    }
+  },
+
+  computed: {
+    currentTab: function () {
+      return this.$route.name
+    },
+
+    currentLan: function() {
+      return this.$store.state.lan
     }
   }
 }
