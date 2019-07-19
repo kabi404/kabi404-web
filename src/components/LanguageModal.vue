@@ -3,8 +3,8 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">{{lang('LANGUAGE')}}</p>
-        <button @click="toggleLanguageModal()" class="delete" aria-label="close"></button>
+        <p class="modal-card-title">{{lang('LANGUAGES')}}</p>
+        <button @click="closeModal()" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body has-text-centered">
           <div class="control">
@@ -40,8 +40,43 @@
           </div>
       </section>
       <footer class="modal-card-foot">
-        <button @click="toggleLanguageModal()" class="button">{{lang('CLOSE')}}</button>
+        <button @click="closeModal()" class="button">{{lang('CLOSE')}}</button>
       </footer>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'lanModal',
+
+  methods: {
+    lang: function(strId) {
+      return this.$store.getters.getLanById({
+        name:this.$options.name,
+        id:strId,
+        lan:this.currentLan
+      })
+    },
+
+    closeModal: function () {
+      this.$store.state.showLanModal = false
+    },
+
+    setLan: function (language) {
+      this.$store.state.lan = language
+    }
+  },
+
+  computed: {
+    currentTab: function () {
+      return this.$route.name
+    },
+
+    currentLan: function () {
+      return this.$store.state.lan
+    }
+  }
+}
+</script>
+

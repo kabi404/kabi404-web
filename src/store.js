@@ -10,7 +10,8 @@ export default new Vuex.Store({
     language
   },
   state: {
-    lan: 'es'
+    lan: 'es',
+    showLanModal: false
   },
   mutations: {
 

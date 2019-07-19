@@ -2,7 +2,7 @@
   <div id="app">
     <section class="hero is-fullheight is-default is-bold">
             <div class="hero-head">
-                <Navbar/>
+                <Navbar />
             </div>
             <div class="hero-body">
                 <router-view></router-view>
@@ -16,20 +16,15 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import LanModal from './components/Language.vue'
+import LanModal from './components/LanguageModal.vue'
 
 export default {
   name: 'app',
 
   components: {
     Navbar,
-    Footer
-  },
-
-  data: function () {
-    return {
-      showLanModal: false
-    }
+    Footer,
+    LanModal
   },
 
   methods: {
@@ -47,8 +42,12 @@ export default {
       return this.$route.name
     },
 
-    currentLan: function() {
+    currentLan: function () {
       return this.$store.state.lan
+    },
+
+    showLanModal: function () {
+      return this.$store.state.showLanModal
     }
   }
 }

@@ -24,8 +24,8 @@
                           <li v-bind:class="{'is-active': currentTab == 'projects'}">
                               <router-link to="/projects">{{ lang('PROJECTS') }}</router-link>
                           </li>
-                          <li @click="toggleLanguageModal()">
-                              <router-link to="">{{ lang('LANGUAGE') }}</router-link>
+                          <li>
+                              <a @click="showLanModal()">{{ lang('LANGUAGE') }}</a>
                           </li>
                       </ul>
                   </div>
@@ -46,6 +46,10 @@ export default {
         id:strId,
         lan:this.currentLan
       })
+    },
+
+    showLanModal: function () {
+      this.$store.state.showLanModal = true
     }
   },
 
