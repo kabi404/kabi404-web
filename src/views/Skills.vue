@@ -81,9 +81,9 @@ export default {
 
     lang: function(strId) {
       return this.$store.getters.getLanById({
-        name:this.$options.name,
-        id:strId,
-        lan:this.currentLan
+        name: this.$options.name,
+        id: strId,
+        lan: this.currentLan
       })
     }
   }

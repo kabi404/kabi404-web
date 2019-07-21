@@ -6,7 +6,9 @@
             </div>
             <div class="hero-body">
                 <router-view></router-view>
-                <LanModal v-if="showLanModal"/>
+                <transition name="fade" :duration="300">
+                  <LanModal v-if="showLanModal"/>
+                </transition>
             </div>
           <Footer/>
         </section>
@@ -59,4 +61,16 @@ export default {
     -webkit-filter: grayscale(30%)
     filter: grayscale(30%)
 </style>
+
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s;
+  animation: bounce-in .10s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
+
+
 

@@ -3,7 +3,7 @@
       {
         "title": "Kanjinary",
         "subtitle": "Javier Parada",
-        "description": "Aplicación web y base de datos para estudiar kanjis japoneses en el orden de estudio japonés. Datos obtenidos de apuntes de la Escuela Oficial de Idiomas de Málaga.",
+        "description": "Aplicación web y base de datos para estudiar kanjis japoneses en el orden de estudio japonés.",
         "projectImg": "/img/kanjinary.png",
         "orgImg": "https://avatars3.githubusercontent.com/u/19194763?s=460&v=4",
         "downloadLink": "https://www.kabi404.dev/kanjinary/",
@@ -11,7 +11,7 @@
       },{
         "title": "PPCE",
         "subtitle": "Javier Parada",
-        "description": "Plataforma de Prevención y Control de Emergencias. Trabajo de final de grado en la Universidad de Málaga en el grado de Ingeniería del Software.",
+        "description": "Plataforma o centro de control que permite a los servicios de emergencias (Protección Civil, Fuerzas de Seguridad del Estado, etc.) gestionar, monitorizar y aportar información publica como protocolos ante situaciones de emergencia, para facilitar la comunicación con la población. Sse facilitará además la generación de códigos QR con accesos directos a esta información fácilmente ubicables.",
         "projectImg": "/img/ppce.png",
         "orgImg": "https://upload.wikimedia.org/wikipedia/commons/2/21/Universidad_de_Málaga.jpg",
         "downloadLink": "http://www.kabi404.dev/PPCE/",
