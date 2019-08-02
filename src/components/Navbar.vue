@@ -50,6 +50,23 @@ export default {
 
     showLanModal: function () {
       this.$store.state.showLanModal = true
+    },
+
+    burgerToggleEventAdd: function() {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
     }
   },
 
@@ -61,6 +78,10 @@ export default {
     currentLan: function() {
       return this.$store.state.lan
     }
+  },
+
+  mounted: function () {
+    this.burgerToggleEventAdd()
   }
 }
 </script>
