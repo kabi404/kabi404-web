@@ -24,6 +24,9 @@
                           <li v-bind:class="{'is-active': currentTab == 'projects'}">
                               <router-link to="/projects">{{ lang('PROJECTS') }}</router-link>
                           </li>
+                          <li v-bind:class="{'is-active': currentTab == 'blog'}">
+                              <router-link to="/blog">{{ lang('BLOG') }}</router-link>
+                          </li>
                           <li>
                               <a @click="showLanModal()">{{ lang('LANGUAGE') }}</a>
                           </li>

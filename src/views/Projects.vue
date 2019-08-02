@@ -3,19 +3,21 @@
     <div class="columns is-multiline">
       <div class="column is-one-third" v-for="index in [0,1,2]" :key="index">
         <div v-for="(project, subindex) in projects" :key="subindex">
-          <div class="columns" v-if="project">
-            <div v-if="subindex % 3 == index" class="column">
-              <transition name="fade" appear>
-                <ProjectCard
-                  :title="project.title"
-                  :subtitle="project.subtitle"
-                  :screenshot="project.projectImg"
-                  :img="project.orgImg"
-                  :description="project.description"
-                  :downloadLink="project.downloadLink"
-                  :repoLink="project.repoLink"
-                />
-              </transition>
+          <div v-if="project">
+            <div v-if="subindex % 3 == index" class="columns">
+              <div class="column">
+                <transition name="fade" appear>
+                  <ProjectCard
+                    :title="project.title"
+                    :subtitle="project.subtitle"
+                    :screenshot="project.projectImg"
+                    :img="project.orgImg"
+                    :description="project.description"
+                    :downloadLink="project.downloadLink"
+                    :repoLink="project.repoLink"
+                  />
+                </transition>
+              </div>
             </div>
           </div>
         </div>

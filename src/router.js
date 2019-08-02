@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Skills from './views/Skills.vue'
 import Projects from './views/Projects.vue'
+import Blog from './views/Blog.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: Projects
+    },
+    {
+      path: '/blog/:entry',
+      name: 'blog',
+      component: Blog
     }
   ]
 })
