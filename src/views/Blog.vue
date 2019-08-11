@@ -8,7 +8,11 @@
     <div v-if="!entry || entry == ''">
       <div v-for="blogEntry in entries" :key="blogEntry.title" class="columns is-vcentered">
         <div class="column is-narrow">
-          <router-link v-bind:to="'/blog/' + blogEntry.title | titleRoute" class="is-size-3">{{blogEntry.title}}</router-link>
+          <router-link
+            v-bind:to="'/blog/' + blogEntry.title | titleRoute"
+            class="is-size-3">
+              • {{blogEntry.title | capitalize}}
+          </router-link>
         </div>
         <div class="column">
           <div class="tags">
@@ -59,6 +63,12 @@ export default {
   filters: {
     titleRoute: function(title) {
       return title.split(' ').join('-');
+    },
+
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   },
 
