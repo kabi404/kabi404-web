@@ -4,7 +4,11 @@ export default {
     currentEntry: ''
   },
 
-  getters: {},
+  getters: {
+    entry: function (state) {
+      return state.currentEntry
+    }
+  },
 
   mutations: {
     setEntryReferences: function () {
@@ -28,7 +32,7 @@ export default {
       const axios = require('axios')
       axios.get('https://www.kabi404.dev/blog/all/' + name + '.md')
         .then(function (response) {
-          alert(JSON.stringify.response)
+          context.state.currentEntry = response.data
         })
         .catch(function (err) {
           console.log(err)

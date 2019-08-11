@@ -1,26 +1,19 @@
 <template>
-  <vue-simple-markdown :source="entry.content"/>
+<div>
+  <vue-simple-markdown :source="entry"/>
+</div>
 </template>
 
 <script>
-import VueSimpleMarkdown from 'vue-simple-markdown'
 
 export default {
   name: 'entry',
 
-  components: {
-    VueSimpleMarkdown
-  },
-
-  data: function () {
-    return {
-      entry: {
-
-      }
-    }
-  },
-
   computed: {
+    entry: function () {
+      return this.$store.getters.entry
+    },
+
     currentTab: function () {
       return this.$route.name
     },
@@ -30,7 +23,7 @@ export default {
     }
   },
 
-  mounted: function () {
+  beforeMount: function () {
     this.$store.dispatch('loadEntry', this.$route.params.entry)
   }
 }

@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope, faDatabase, faServer, faMobile, faFileCode, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithubAlt, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueSimpleMarkdown from 'vue-simple-markdown'
 
 Vue.config.productionTip = false
 
@@ -27,6 +28,8 @@ library.add({
 })
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.use(VueSimpleMarkdown)
 
 new Vue({
   router,
