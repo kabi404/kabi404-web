@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import "vue-simple-markdown/dist/vue-simple-markdown.min.css"
 
 export default {
   name: 'entry',
@@ -28,3 +29,4 @@ export default {
   }
 }
 </script>
+
