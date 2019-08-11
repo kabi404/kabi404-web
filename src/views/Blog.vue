@@ -2,11 +2,15 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <Entry v-if="entry"/>
+        <Entry v-if="entry && entry != ''"/>
       </div>
     </div>
-    <div v-if="!entry">
-
+    <div v-if="!entry || entry == ''">
+      <div v-for="blogEntry in entries" :key="blogEntry.title" class="columns">
+        <div class="column is-8">
+          <p class="is-size-3">{{blogEntry}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,8 +41,16 @@ export default {
     },
 
     entry: function () {
-      return this.$route.params
+      return this.$route.params.entry
+    },
+
+    entries: function () {
+      return this.$store.getters.entries
     }
+  },
+
+  beforeMount: function () {
+    this.$store.dispatch('loadBlogReferences')
   }
 }
 </script>

@@ -7,14 +7,14 @@ export default {
   getters: {
     entry: function (state) {
       return state.currentEntry
+    },
+
+    entries: function (state) {
+      return state.entryReferences
     }
   },
 
-  mutations: {
-    setEntryReferences: function () {
-
-    }
-  },
+  mutations: {},
 
   actions: {
     loadBlogReferences: function (context) {

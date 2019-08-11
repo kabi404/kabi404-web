@@ -1,4 +1,6 @@
-{
-    "title": "foo",
-    "tags": ["test"]
-}
+[
+    {
+        "title": "foo",
+        "tags": ["test"]
+    }
+]
