@@ -30,14 +30,8 @@ export default {
     }
   },
 
-  methods: {
-    loadEntry: function () {
-
-    }
-  },
-
   mounted: function () {
-    this.loadEntry()
+    this.$store.dispatch('loadEntry', this.$route.params.entry)
   }
 }
 </script>
