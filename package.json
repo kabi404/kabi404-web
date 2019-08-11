@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build && npm run blog",
+    "lint": "vue-cli-service lint",
+    "blog": "node add-blog-entries"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
