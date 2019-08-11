@@ -11,8 +11,10 @@
           <router-link v-bind:to="'/blog/' + blogEntry.title | titleRoute" class="is-size-3">{{blogEntry.title}}</router-link>
         </div>
         <div class="column">
-          <div v-for="tag in blogEntry.tags" :key="tag" class="tags">
-            <span class="tag is-light">{{tag}}</span>
+          <div class="tags">
+            <span v-for="tag in blogEntry.tags" :key="tag" class="tag is-light">
+              {{tag}}
+            </span>
           </div>
         </div>
       </div>
