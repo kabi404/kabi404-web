@@ -58,7 +58,7 @@ export default {
 
   filters: {
     titleRoute: function(title) {
-      return title.replace(' ', '-')
+      return title.split(' ').join('-');
     }
   },
 
