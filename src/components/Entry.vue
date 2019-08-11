@@ -32,10 +32,7 @@ export default {
 
   methods: {
     loadEntry: function () {
-      let entryId = this.$route.params.entry
-      let entry = require(`@/assets/blog/all/${entryId}.json`)
-      if(entry)
-        this.entry = entry
+
     }
   },
 
