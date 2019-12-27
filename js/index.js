@@ -34,6 +34,10 @@ var app = new Vue({
     }
   },
   mounted: async function() {
-    this.setLanguage('en')
+    await this.setLanguage('en')
+    new TypeIt('#typeit', {
+      startDelay: 300,
+      speed: 150
+    }).go()
   }
 })
