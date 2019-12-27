@@ -1,14 +1,20 @@
 var app = new Vue({
   el: '#app',
   data: {
-    currentTab: 'home'
+    currentTab: 'home',
+    languageData: {}
   },
   methods: {
     lang: function(key) {
-      return key
+      return this.languageData[key]
     },
     setTab: function(tab) {
       this.currentTab = tab
+    },
+    setLanguage: async function(lanKey) {
+      const { data } = await axios.get('./static/data/lan.json')
+      Object.keys(data).forEach(wordKey => { data[wordKey] = data[wordKey][lanKey] })
+      this.languageData = data
     }
   },
   filters: {
@@ -19,9 +25,13 @@ var app = new Vue({
     },
 
     capitalizeAll: function (value) {
+      if (!value) return ''
       return value
         .toLowerCase()
         .replace(/\b\w/g, l => l.toUpperCase())
     }
+  },
+  mounted: async function() {
+    this.setLanguage('en')
   }
 })
