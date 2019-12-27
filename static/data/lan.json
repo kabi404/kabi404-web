@@ -1,0 +1,37 @@
+{
+    "HOME": {
+        "en": "home",
+        "es": "inicio",
+        "jp": ""
+    },
+    "PROJECTS": {
+        "en": "projects",
+        "es": "proyectos",
+        "jp": ""
+    },
+    "LANGUAGE": {
+        "en": "language",
+        "es": "idioma",
+        "jp": ""
+    },
+    "SKILLS": {
+        "en": "skills",
+        "es": "habilidades",
+        "jp": ""
+    },
+    "JAVIER PARADA": {
+        "en": "javier parada",
+        "es": "javier parada",
+        "jp": ""
+    },
+    "SOFTWARE ENGINEER": {
+        "en": "software engineer and full-stack developer",
+        "es": "ingeniero de software y desarrollador full-stack",
+        "jp": ""
+    },
+    "MORE ABOUT ME": {
+        "en": "more about me",
+        "es": "más sobre mi",
+        "jp": ""
+    }
+}

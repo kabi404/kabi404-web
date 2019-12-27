@@ -1,1 +1,150 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/img/developer.png><title>Javier Parada</title><link href=/css/app.8377d5ce.css rel=preload as=style><link href=/css/chunk-vendors.8a17c315.css rel=preload as=style><link href=/js/app.ca44eb8e.js rel=preload as=script><link href=/js/chunk-vendors.49c6fd29.js rel=preload as=script><link href=/css/chunk-vendors.8a17c315.css rel=stylesheet><link href=/css/app.8377d5ce.css rel=stylesheet></head><body><noscript><strong>We're sorry but kabi404.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.49c6fd29.js></script><script src=/js/app.ca44eb8e.js></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Javier Parada's personal webpage." />
+  <meta name="keywords" content="Javier Parada, kabi404, webpage, portfolio" />
+  <meta name="author" content="Javier Parada" />
+  <meta name="copyright" content="Javier Parada" />
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+  <!-- Vue development version -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Vue production version -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <!-- Fontawesome icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <link rel="stylesheet" href="./css/index.css">
+
+  <title>Javier Parada</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Hero -->
+    <section class="hero is-fullheight is-default is-bold">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+
+            <!-- Navbar -->
+            <div id="navbarMenu" class="navbar-menu">
+              <div class="navbar-end">
+                <div class="tabs is-right">
+                  <ul>
+                    <li @click="setTab('home')" v-bind:class="{'is-active': currentTab == 'home'}">
+                      <a>{{ lang('HOME') | capitalize}}</a>
+                    </li>
+                    <!--<li @click="setTab('skills')" v-bind:class="{'is-active': currentTab == 'skills'}">
+                                  <a>{{ lang('SKILLS') | capitalize}}</a>
+                              </li>-->
+                    <li @click="setTab('projects')" v-bind:class="{'is-active': currentTab == 'projects'}">
+                      <a>{{ lang('PROJECTS') | capitalize}}</a>
+                    </li>
+                    <li>
+                      <a @click="showLanModal()">{{ lang('LANGUAGE') | capitalize}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End navbar -->
+          </div>
+        </nav>
+      </div>
+      <div class="hero-body">
+
+        <!-- MainView -->
+        <div class="container has-text-centered">
+          <div class="columns is-vcentered is-centered">
+            <div class="column is-3">
+              <transition name="fade" appear>
+                <figure class="image is-1by1">
+                  <img src="https://avatars3.githubusercontent.com/u/19194763?s=460&v=4" class="is-rounded"
+                    alt="Description">
+                </figure>
+              </transition>
+            </div>
+            <div class="column is-6 is-offset-1">
+              <h1 id="typeit" class="title is-2">
+                {{ lang('JAVIER PARADA') | capitalizeAll }}
+              </h1>
+              <h2 class="subtitle is-4">
+                {{ lang('SOFTWARE ENGINEER') | capitalize }}
+              </h2>
+              <br>
+              <div class="columns is-centered is-multiline has-text-centered">
+                <div class="column is-2">
+                  <a target="_blank" href="https://github.com/kabi404" class="is-size-3 has-text-grey-dark">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+                <div class="column is-2">
+                  <a target="_blank" href="https://www.linkedin.com/in/kabi404/" class="is-size-3 has-text-grey-dark">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+                <div class="column is-2">
+                  <a target="_blank" href="https://twitter.com/kabi404" class="is-size-3 has-text-grey-dark">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="column is-2">
+                  <a href="mailto:kabi404@outlook.com" class="is-size-3 has-text-grey-dark">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End main view -->
+
+      </div>
+      <!-- Continue -->
+      <div class="hero-foot">
+        <div class="container">
+          <div class="tabs is-centered">
+            <ul>
+              <li>
+                <a @click="alertError('Not implemented yet :(')">
+                  <i class="fas fa-arrow-down"></i>
+                  &nbsp;
+                  {{ lang('MORE ABOUT ME') | capitalize }}
+                  &nbsp;
+                  <i class="fas fa-arrow-down"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End continue -->
+    </section>
+    <!-- End Hero -->
+
+
+  </div>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>
