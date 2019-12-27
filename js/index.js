@@ -15,6 +15,9 @@ var app = new Vue({
       const { data } = await axios.get('./static/data/lan.json')
       Object.keys(data).forEach(wordKey => { data[wordKey] = data[wordKey][lanKey] })
       this.languageData = data
+    },
+    alertError: function(msg) {
+      alert(msg)
     }
   },
   filters: {
@@ -23,7 +26,6 @@ var app = new Vue({
       value = value.toString()
       return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
     },
-
     capitalizeAll: function (value) {
       if (!value) return ''
       return value
