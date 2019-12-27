@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Javier Parada's personal webpage." />
+  <meta name="keywords" content="Javier Parada, kabi404, webpage, portfolio" />
+  <meta name="author" content="Javier Parada" />
+  <meta name="copyright" content="Javier Parada" />
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+  <!-- Vue development version -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Vue production version -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+
+  <!-- Fontawesome icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <link rel="stylesheet" href="./css/index.css">
+
+  <title>Javier Parada</title>
+</head>
+
+<body>
+  <div id="app">
+    <section class="hero is-fullheight is-default is-bold">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+              <div class="navbar-brand">
+                  <a class="navbar-item is-size-2">
+                      <i class="fab fa-firefox"></i>
+                  </a>
+                  <span class="navbar-burger burger" data-target="navbarMenu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </span>
+              </div>
+
+              <!-- Navbar -->
+              <div id="navbarMenu" class="navbar-menu">
+                  <div class="navbar-end">
+                      <div class="tabs is-right">
+                          <ul>
+                              <li @click="selTab('home')" v-bind:class="{'is-active': currentTab == 'home'}">
+                                  <a>{{ lang('HOME') | capitalize}}</a>
+                              </li>
+                              <li @click="selTab('skills')" v-bind:class="{'is-active': currentTab == 'skills'}">
+                                  <a>{{ lang('SKILLS') | capitalize}}</a>
+                              </li>
+                              <li @click="selTab('projects')" v-bind:class="{'is-active': currentTab == 'projects'}">
+                                  <a>{{ lang('PROJECTS') | capitalize}}</a>
+                              </li>
+                              <li>
+                                  <a @click="showLanModal()">{{ lang('LANGUAGE') | capitalize}}</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- End navbar -->
+          </div>
+        </nav>
+      </div>
+      <div class="hero-body">
+        {{currentTab}}
+      </div>
+      <Footer />
+    </section>
+  </div>
+</body>
+
+<script src="js/index.js"></script>
+</html>
