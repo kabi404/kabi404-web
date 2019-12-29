@@ -49,7 +49,7 @@
               </span>
             </div>
 
-            <!-- Navbar -->
+            <!-- Navbar
             <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-end">
                 <div class="tabs is-right">
@@ -57,11 +57,8 @@
                     <li @click="setTab('home')" v-bind:class="{'is-active': currentTab == 'home'}">
                       <a>{{ lang('HOME') | capitalize}}</a>
                     </li>
-                    <!--<li @click="setTab('skills')" v-bind:class="{'is-active': currentTab == 'skills'}">
-                                  <a>{{ lang('SKILLS') | capitalize}}</a>
-                              </li>-->
-                    <li @click="setTab('projects')" v-bind:class="{'is-active': currentTab == 'projects'}">
-                      <a>{{ lang('PROJECTS') | capitalize}}</a>
+                    <li v-bind:class="{'is-active': currentTab == 'projects'}">
+                      <a href="#projects">{{ lang('PROJECTS') | capitalize}}</a>
                     </li>
                     <li>
                       <a @click="showLanModal()">{{ lang('LANGUAGE') | capitalize}}</a>
@@ -129,7 +126,7 @@
           <div class="tabs is-centered">
             <ul>
               <li>
-                <a @click="alertError('Not implemented yet :(')">
+                <a href="#projects">
                   <i class="fas fa-arrow-down"></i>
                   &nbsp;
                   {{ lang('MORE ABOUT ME') | capitalize }}
@@ -144,6 +141,39 @@
       <!-- End continue -->
     </section>
     <!-- End Hero -->
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="columns is-centered">
+        <div class="column">
+          <h3 class="is-size-2 has-text-centered">Projects</h3>
+        </div>
+      </div>
+      <div class="columns is-multiline">
+        <!-- Project Card in column -->
+        <div v-for="project in projects" class="column is-3">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <img v-bind:src="project.img" alt="Kanjinary">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-5">{{ project.title | capitalize }}</p>
+                </div>
+              </div>
+              <div class="content">
+                {{ project.description }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Project Card in column -->
+      </div>
+    </section>
+    <!-- End projects -->
 
 
   </div>

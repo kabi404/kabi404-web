@@ -2,7 +2,8 @@ var app = new Vue({
   el: '#app',
   data: {
     currentTab: 'home',
-    languageData: {}
+    languageData: {},
+    projects: []
   },
   methods: {
     lang: function(key) {
@@ -15,9 +16,18 @@ var app = new Vue({
       const { data } = await axios.get('./static/data/lan.json')
       Object.keys(data).forEach(wordKey => { data[wordKey] = data[wordKey][lanKey] })
       this.languageData = data
+      await this.loadProjects(lanKey)
     },
     alertError: function(msg) {
       alert(msg)
+    },
+    loadProjects: async function(lanKey) {
+      const { data } = await axios.get('./static/data/projects.json')
+      data.forEach(project => {
+        project.title = project.title[lanKey]
+        project.description = project.description[lanKey]
+      })
+      this.projects = data
     }
   },
   filters: {
