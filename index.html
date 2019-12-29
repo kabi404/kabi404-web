@@ -49,17 +49,11 @@
               </span>
             </div>
 
-            <!-- Navbar
+            <!-- Navbar -->
             <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-end">
                 <div class="tabs is-right">
                   <ul>
-                    <li @click="setTab('home')" v-bind:class="{'is-active': currentTab == 'home'}">
-                      <a>{{ lang('HOME') | capitalize}}</a>
-                    </li>
-                    <li v-bind:class="{'is-active': currentTab == 'projects'}">
-                      <a href="#projects">{{ lang('PROJECTS') | capitalize}}</a>
-                    </li>
                     <li>
                       <a @click="showLanModal()">{{ lang('LANGUAGE') | capitalize}}</a>
                     </li>
@@ -146,7 +140,7 @@
     <section id="projects" class="section">
       <div class="columns is-centered">
         <div class="column">
-          <h3 class="is-size-2 has-text-centered">Projects</h3>
+          <h3 class="is-size-2 has-text-centered">{{ lang('PROJECTS') | capitalize }}</h3>
         </div>
       </div>
       <div class="columns is-multiline">
