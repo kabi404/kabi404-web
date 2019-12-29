@@ -18,8 +18,8 @@ var app = new Vue({
       this.languageData = data
       await this.loadProjects(lanKey)
     },
-    alertError: function(msg) {
-      alert(msg)
+    showLanModal: function() {
+      alert('Not implemented yet :(')
     },
     loadProjects: async function(lanKey) {
       const { data } = await axios.get('./static/data/projects.json')
