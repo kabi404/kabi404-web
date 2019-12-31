@@ -10,9 +10,6 @@
   <meta name="author" content="Javier Parada" />
   <meta name="copyright" content="Javier Parada" />
 
-  <!-- Bulma -->
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-
   <!-- Vue development version -->
   <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 
@@ -25,11 +22,17 @@
   <!-- Fontawesome icons -->
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+  <!-- Typeit -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
+
+  <!-- Bulma -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
   <!-- Custom css -->
   <link type="text/css" rel="stylesheet" href="./css/index.css">
 
-  <!-- Typeit -->
-  <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
+  <!-- Fav icon -->
+  <link rel="icon" type="image/png" href="img/developer.png" sizes="16x16">
 
   <title>Javier Parada</title>
 </head>
@@ -146,6 +149,7 @@
       <div class="columns is-multiline m-t-2">
         <!-- Project Card in column -->
         <div v-for="project in projects" class="column is-3 is-fullheight">
+          <a v-bind:href="project.link" target="_blank">
           <div class="card">
             <div class="card-image">
               <figure class="image">
@@ -163,12 +167,12 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
         <!-- End Project Card in column -->
       </div>
     </section>
     <!-- End projects -->
-
 
   </div>
 </body>
