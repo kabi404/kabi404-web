@@ -214,6 +214,33 @@
 .p-r-9 {
   padding-right: 9em !important; }
 
+.text-1 {
+  font-size: 2em; }
+
+.text-2 {
+  font-size: 3em; }
+
+.text-3 {
+  font-size: 4em; }
+
+.text-4 {
+  font-size: 5em; }
+
+.text-5 {
+  font-size: 6em; }
+
+.text-6 {
+  font-size: 7em; }
+
+.text-7 {
+  font-size: 8em; }
+
+.text-8 {
+  font-size: 9em; }
+
+.text-9 {
+  font-size: 10em; }
+
 img {
   -webkit-filter: grayscale(30%);
   filter: grayscale(30%); }
