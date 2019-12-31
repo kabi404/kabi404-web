@@ -285,10 +285,3 @@
 
 .p-r-100 {
   padding-right: 100px !important; }
-
-img {
-  -webkit-filter: grayscale(30%);
-  filter: grayscale(30%); }
-
-.card {
-  height: 100%; }
