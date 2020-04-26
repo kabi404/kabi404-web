@@ -18,7 +18,7 @@
                 <div class="tabs is-right">
                   <ul>
                     <li @click="showLanModal()">
-                      <a class="is-size-3">
+                      <a class="is-size-4">
                         <font-awesome-icon icon="language"/>
                       </a>
                     </li>
@@ -53,23 +53,23 @@
               <br>
               <div class="columns is-centered is-multiline has-text-centered">
                 <div class="column is-2">
-                  <a target="_blank" href="https://github.com/kabi404" class="is-size-3 has-text-grey-dark">
-                    <i class="fab fa-github"></i>
+                  <a target="_blank" href="https://github.com/habinari" class="is-size-3 has-text-grey-dark">
+                    <font-awesome-icon :icon="['fab', 'github']"/>
                   </a>
                 </div>
                 <div class="column is-2">
-                  <a target="_blank" href="https://www.linkedin.com/in/kabi404/" class="is-size-3 has-text-grey-dark">
-                    <i class="fab fa-linkedin-in"></i>
+                  <a target="_blank" href="https://www.linkedin.com/in/javier-parada/" class="is-size-3 has-text-grey-dark">
+                    <font-awesome-icon :icon="['fab', 'linkedin']"/>
                   </a>
                 </div>
                 <div class="column is-2">
-                  <a target="_blank" href="https://twitter.com/kabi404" class="is-size-3 has-text-grey-dark">
-                    <i class="fab fa-twitter"></i>
+                  <a target="_blank" href="https://twitter.com/habinari" class="is-size-3 has-text-grey-dark">
+                    <font-awesome-icon :icon="['fab', 'twitter']"/>
                   </a>
                 </div>
                 <div class="column is-2">
-                  <a href="mailto:kabi404@outlook.com" class="is-size-3 has-text-grey-dark">
-                    <i class="fas fa-envelope"></i>
+                  <a href="mailto:javierparada@inaricore.com" class="is-size-3 has-text-grey-dark">
+                    <font-awesome-icon icon="envelope"/>
                   </a>
                 </div>
               </div>
@@ -79,25 +79,6 @@
         <!-- End main view -->
 
       </div>
-      <!-- Continue -->
-      <div class="hero-foot">
-        <div class="container">
-          <div class="tabs is-centered">
-            <ul>
-              <li>
-                <a href="#skills">
-                  <i class="fas fa-arrow-down"></i>
-                  &nbsp;
-                  {{ 'MORE ABOUT ME' | capitalize }}
-                  &nbsp;
-                  <i class="fas fa-arrow-down"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End continue -->
     </section>
     <!-- End Hero -->
 </template>
