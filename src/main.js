@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 library.add(faLanguage)
 
