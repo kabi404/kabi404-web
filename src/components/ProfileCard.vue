@@ -18,7 +18,9 @@
                 <div class="tabs is-right">
                   <ul>
                     <li @click="showLanModal()">
-                      <a>{{ lang('LANGUAGE') | capitalize}}</a>
+                      <a class="is-size-3">
+                        <font-awesome-icon icon="language"/>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -43,10 +45,10 @@
             </div>
             <div class="column is-6 is-offset-1">
               <h1 id="typeit" class="title is-2">
-                {{ lang('JAVIER PARADA') | capitalizeAll }}
+                {{ 'JAVIER PARADA' | lang | capitalizeAll }}
               </h1>
               <h2 class="subtitle is-4">
-                {{ lang('SOFTWARE ENGINEER') | capitalize }}
+                {{ 'SOFTWARE ENGINEER' | capitalize }}
               </h2>
               <br>
               <div class="columns is-centered is-multiline has-text-centered">
@@ -86,7 +88,7 @@
                 <a href="#skills">
                   <i class="fas fa-arrow-down"></i>
                   &nbsp;
-                  {{ lang('MORE ABOUT ME') | capitalize }}
+                  {{ 'MORE ABOUT ME' | capitalize }}
                   &nbsp;
                   <i class="fas fa-arrow-down"></i>
                 </a>
@@ -110,9 +112,6 @@ export default {
     }
   },
   methods: {
-    lang: function () {
-
-    }
   }
 }
 </script>
