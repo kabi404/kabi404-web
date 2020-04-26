@@ -84,6 +84,7 @@
 </template>
 
 <script>
+import TypeIt from 'typeit'
 
 export default {
   name: 'ProfileCard',
@@ -93,6 +94,15 @@ export default {
     }
   },
   methods: {
+    showLanModal: function () {
+      alert('Not implemented yet :(')
+    }
+  },
+  mounted: async function () {
+    new TypeIt('#typeit', {
+      startDelay: 300,
+      speed: 150
+    }).go()
   }
 }
 </script>
