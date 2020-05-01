@@ -18,7 +18,7 @@
                 <div class="tabs is-right">
                   <ul>
                     <li @click="showLanModal()">
-                      <a class="is-size-4">
+                      <a class="is-size-5">
                         <font-awesome-icon icon="language"/>
                       </a>
                     </li>
