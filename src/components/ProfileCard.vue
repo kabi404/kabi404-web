@@ -101,7 +101,7 @@ export default {
     },
     translate,
     type: function () {
-      const first = this.language === 'jp' ? 'es' : 'jp'
+      const first = this.language === 'jp' ? 'en' : 'jp'
       const second = this.language
       if (this.typeIt) {
         this.typeIt

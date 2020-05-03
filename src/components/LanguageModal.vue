@@ -3,28 +3,46 @@
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Change language</p>
+      <p class="modal-card-title">Idioma | Language | 言語</p>
       <button class="delete" aria-label="close" @click="closeLanguage()"></button>
     </header>
     <section class="modal-card-body">
-      <div class="control">
-        <label class="radio">
-          <input type="radio" value="es" v-model="lan">
-          Español
-        </label>
-        <label class="radio">
-          <input type="radio" value="en" v-model="lan">
-          English
-        </label>
-        <label class="radio">
-          <input type="radio" value="jp" v-model="lan">
-          日本語
-        </label>
+      <div class="columns">
+        <div class="column">
+          <a @click="setLanguage('es')">
+            <div class="card">
+              <div class="card-content has-text-centered">
+                <p class="subtitle">
+                  Español
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a @click="setLanguage('en')">
+            <div class="card">
+              <div class="card-content has-text-centered">
+                <p class="subtitle">
+                  English
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a @click="setLanguage('jp')">
+            <div class="card">
+              <div class="card-content has-text-centered">
+                <p class="subtitle">
+                  日本語
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
-    <footer class="modal-card-foot">
-      <button @click="setLanguage()" class="button is-success">Save</button>
-    </footer>
   </div>
 </div>
 </template>
@@ -34,18 +52,10 @@ import config from '../config'
 
 export default {
   name: 'LanguageModal',
-  props: {
-    language: String
-  },
-  data: function () {
-    return {
-      lan: this.language
-    }
-  },
   methods: {
-    setLanguage: function () {
-      config.language = this.lan
-      this.$emit('set-lan', this.lan)
+    setLanguage: function (lan) {
+      config.language = lan
+      this.$emit('set-lan', lan)
     },
     closeLanguage: function () {
       this.$emit('hide-lan')
