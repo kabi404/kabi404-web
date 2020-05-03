@@ -1,7 +1,8 @@
 <template>
   <div class="home">
 
-    <profile-card/>
+    <profile-card v-on:show-lan="toggleLang()"/>
+    <language-modal v-on:hide-lan="toggleLang()" v-if="showLan"/>
 
   </div>
 </template>
@@ -9,21 +10,23 @@
 <script>
 
 import ProfileCard from '../components/ProfileCard'
+import LanguageModal from '../components/LanguageModal'
 
 export default {
   name: 'Home',
   data: function () {
     return {
-
+      showLan: false
     }
   },
   methods: {
-    lang: function () {
-
+    toggleLang: function () {
+      this.showLan = !this.showLan
     }
   },
   components: {
-    profileCard: ProfileCard
+    profileCard: ProfileCard,
+    languageModal: LanguageModal
   }
 }
 </script>

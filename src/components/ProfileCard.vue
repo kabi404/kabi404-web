@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     showLanModal: function () {
-      alert('Not implemented yet :(')
+      this.$emit('show-lan')
     }
   },
   mounted: async function () {
