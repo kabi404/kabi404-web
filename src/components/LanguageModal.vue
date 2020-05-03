@@ -9,29 +9,43 @@
     <section class="modal-card-body">
       <div class="control">
         <label class="radio">
-          <input type="radio" name="foobar">
+          <input type="radio" value="es" v-model="lan">
           Español
         </label>
         <label class="radio">
-          <input type="radio" name="foobar" checked>
+          <input type="radio" value="en" v-model="lan">
           English
         </label>
         <label class="radio">
-          <input type="radio" name="foobar">
+          <input type="radio" value="jp" v-model="lan">
           日本語
         </label>
       </div>
     </section>
+    <footer class="modal-card-foot">
+      <button @click="setLanguage()" class="button is-success">Save</button>
+    </footer>
   </div>
 </div>
 </template>
 
 <script>
+import config from '../config'
+
 export default {
   name: 'LanguageModal',
+  props: {
+    language: String
+  },
+  data: function () {
+    return {
+      lan: this.language
+    }
+  },
   methods: {
     setLanguage: function () {
-
+      config.language = this.lan
+      this.$emit('set-lan', this.lan)
     },
     closeLanguage: function () {
       this.$emit('hide-lan')

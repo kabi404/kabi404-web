@@ -44,11 +44,9 @@
               </transition>
             </div>
             <div class="column is-6 is-offset-1">
-              <h1 id="typeit" class="title is-2">
-                {{ 'JAVIER PARADA' | lang | capitalizeAll }}
-              </h1>
+              <h1 id="typeit" class="title is-2"></h1>
               <h2 class="subtitle is-4">
-                {{ 'SOFTWARE ENGINEER' | capitalize }}
+                {{ translate('SOFTWARE ENGINEER', language) | capitalize }}
               </h2>
               <br>
               <div class="columns is-centered is-multiline has-text-centered">
@@ -85,24 +83,52 @@
 
 <script>
 import TypeIt from 'typeit'
+import translate from '../translate'
 
 export default {
   name: 'ProfileCard',
   data: function () {
     return {
-
+      typeIt: null
     }
+  },
+  props: {
+    language: String
   },
   methods: {
     showLanModal: function () {
       this.$emit('show-lan')
+    },
+    translate,
+    type: function () {
+      const first = this.language === 'jp' ? 'es' : 'jp'
+      const second = this.language
+      if (this.typeIt) {
+        this.typeIt
+          .reset()
+          .destroy()
+      }
+
+      this.typeIt = new TypeIt('#typeit', {
+        startDelay: 300,
+        speed: 150
+      })
+
+      this.typeIt
+        .type(this.translate('JAVIER PARADA', first))
+        .pause(1500)
+        .delete()
+        .type(this.translate('JAVIER PARADA', second))
+        .go()
+    }
+  },
+  watch: {
+    language: function () {
+      this.type()
     }
   },
   mounted: async function () {
-    new TypeIt('#typeit', {
-      startDelay: 300,
-      speed: 150
-    }).go()
+    this.type()
   }
 }
 </script>

@@ -1,8 +1,15 @@
 <template>
   <div class="home">
 
-    <profile-card v-on:show-lan="toggleLang()"/>
-    <language-modal v-on:hide-lan="toggleLang()" v-if="showLan"/>
+    <profile-card
+      v-on:show-lan="toggleLang()"
+      v-bind:language="language"
+    />
+    <language-modal
+      v-on:hide-lan="toggleLang()"
+      v-on:set-lan="setLan($event)"
+      v-if="showLan"
+    />
 
   </div>
 </template>
@@ -16,12 +23,17 @@ export default {
   name: 'Home',
   data: function () {
     return {
-      showLan: false
+      showLan: false,
+      language: 'en'
     }
   },
   methods: {
     toggleLang: function () {
       this.showLan = !this.showLan
+    },
+    setLan: function (lan) {
+      this.language = lan
+      this.showLan = false
     }
   },
   components: {
