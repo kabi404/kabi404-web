@@ -51,7 +51,7 @@
               <br>
               <div class="columns is-centered is-multiline has-text-centered">
                 <div class="column is-2">
-                  <a target="_blank" href="https://github.com/habinari" class="is-size-3 has-text-grey-dark">
+                  <a target="_blank" href="https://github.com/parada3desu" class="is-size-3 has-text-grey-dark">
                     <font-awesome-icon :icon="['fab', 'github']"/>
                   </a>
                 </div>
@@ -61,7 +61,7 @@
                   </a>
                 </div>
                 <div class="column is-2">
-                  <a target="_blank" href="https://twitter.com/habinari" class="is-size-3 has-text-grey-dark">
+                  <a target="_blank" href="https://twitter.com/parada3desu" class="is-size-3 has-text-grey-dark">
                     <font-awesome-icon :icon="['fab', 'twitter']"/>
                   </a>
                 </div>
